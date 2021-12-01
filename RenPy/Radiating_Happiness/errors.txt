@@ -1,66 +1,0 @@
-ï»¿I'm sorry, but errors were detected in your script. Please correct the
-errors listed below, and try again.
-
-
-The label start is defined twice, at File "game/episode1.rpyc", line 14:
-^ñê'0òSÊ*€N†J)©æH”ÚdÓ‰aXÃ@¡Æš´iãäÏõƒÔò¼n©”wÓCRËÔsmcâ
-and File "game/script.rpy", line 14:
-^ñê'0òSÊ*€N†J)©æH”ÚdÓ‰aXÃ@¡Æš´iãäÏõƒÔò¼n©”wÓCRËÔsmcâ
-
-
-The label initialize_main is defined twice, at File "game/episode1.rpyc", line 28:
-¾”ÚdVßÃæé‹§şàŠ7=ú–w¤
-and File "game/script.rpy", line 28:
-¾”ÚdVßÃæé‹§şàŠ7=ú–w¤
-
-
-The label week1 is defined twice, at File "game/episode1.rpyc", line 42:
-uëª€¥³v&—Í®É‰/sôÍ¯pj”_… ¯Å¸—ºÓ¶ùhntí¬f•¼cl	JKÎ®õYŠ¨GÕ·š„¾“ahx2gc[°òèUyéQk,±A4F¦Û&=cÇ±ewÚiÅB£g9´Ë–hW¶“÷T¹ê_ç‚GºÑÌ@|ƒû§y[ãù&?ÍUKáµ$W­c7õ
-and File "game/script.rpy", line 42:
-uëª€¥³v&—Í®É‰/sôÍ¯pj”_… ¯Å¸—ºÓ¶ùhntí¬f•¼cl	JKÎ®õYŠ¨GÕ·š„¾“ahx2gc[°òèUyéQk,±A4F¦Û&=cÇ±ewÚiÅB£g9´Ë–hW¶“÷T¹ê_ç‚GºÑÌ@|ƒû§y[ãù&?ÍUKáµ$W­c7õ
-
-
-The label jellie_intro_convo is defined twice, at File "game/episode1.rpyc", line 49:
-¶•³íd•³1sBÎQŸW(£”cW49ğ„/ç’D½ml—vâzª[^©yr•vÍ<EÚßW˜/¯¦Á¦s‚ì¥`R{C‰Î29¿)ØWÒª?§3REöá¯£²_I¥úV§ÏÚº[ß5ÄÕ6sŸ¬2¹@Í_ˆÏĞíÕR¹[.Ò@¯Ñ@+‘ä5œÀ#Å=ø;¼Ü4šMMçŸ ŒÊ1«É	êÌ‚&„êB·†òZ<ln¯
-and File "game/script.rpy", line 49:
-¶•³íd•³1sBÎQŸW(£”cW49ğ„/ç’D½ml—vâzª[^©yr•vÍ<EÚßW˜/¯¦Á¦s‚ì¥`R{C‰Î29¿)ØWÒª?§3REöá¯£²_I¥úV§ÏÚº[ß5ÄÕ6sŸ¬2¹@Í_ˆÏĞíÕR¹[.Ò@¯Ñ@+‘ä5œÀ#Å=ø;¼Ü4šMMçŸ ŒÊ1«É	êÌ‚&„êB·†òZ<ln¯
-
-
-The label fumbled is defined twice, at File "game/episode1.rpyc", line 62:
-G‹ù®áqº™Çßkâq<ßoáq:ÊãhY?láñRâñCx|<Ö:“Î¬Ì¬±W³Œü‘!òëDş‰VôSCdjRl4gá^\Z™è5N5Ds=œ^ŠÇ´ô¡EÑ×Oª¦¥yZô@Äx\ş¬ŠKùó³Qñ©x¤©Hø+õùëŠG"T\J;Ìß´Sñ·ÚäßµSñ÷
-and File "game/script.rpy", line 62:
-G‹ù®áqº™Çßkâq<ßoáq:ÊãhY?láñRâñCx|<Ö:“Î¬Ì¬±W³Œü‘!òëDş‰VôSCdjRl4gá^\Z™è5N5Ds=œ^ŠÇ´ô¡EÑ×Oª¦¥yZô@Äx\ş¬ŠKùó³Qñ©x¤©Hø+õùëŠG"T\J;Ìß´Sñ·ÚäßµSñ÷
-
-
-The label haven_city_convo is defined twice, at File "game/episode1.rpyc", line 69:
-
-and File "game/script.rpy", line 69:
-
-
-
-The label past_connection_convo is defined twice, at File "game/episode1.rpyc", line 79:
-
-and File "game/script.rpy", line 79:
-
-
-
-The label jellie_low_connection is defined twice, at File "game/episode1.rpyc", line 89:
-
-and File "game/script.rpy", line 89:
-
-
-
-The label jellie_high_connection is defined twice, at File "game/episode1.rpyc", line 94:
-
-and File "game/script.rpy", line 94:
-
-
-
-The label end is defined twice, at File "game/episode1.rpyc", line 99:
-
-and File "game/script.rpy", line 99:
-
-
-
-Ren'Py Version: Ren'Py 7.4.10.2178
-Mon Nov 22 13:30:32 2021
