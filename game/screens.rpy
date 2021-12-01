@@ -95,6 +95,22 @@ style frame:
 ##
 ## https://www.renpy.org/doc/html/screen_special.html#say
 
+# CTC: click to continue
+# It's the blinking icon that shows up at the end of the text.
+screen ctc():
+    image "gui/ctc.png" at ctc_appear:
+        xpos 1550
+        ypos 1000
+        
+
+# This defines the CTC's blinking animation
+transform ctc_appear:
+    alpha 1.0
+    pause 0.5
+    linear 0.25 alpha 0.0
+    linear 0.25 alpha 1.0
+    repeat
+
 screen say(who, what):
     style_prefix "say"
 
@@ -258,8 +274,8 @@ screen quick_menu():
             textbutton _("Skip") action Skip() alternate Skip(fast=True, confirm=True)
             textbutton _("Auto") action Preference("auto-forward", "toggle")
             textbutton _("Save") action ShowMenu('save')
-            textbutton _("Q.Save") action QuickSave()
-            textbutton _("Q.Load") action QuickLoad()
+            # textbutton _("Q.Save") action QuickSave()
+            # textbutton _("Q.Load") action QuickLoad()
             textbutton _("Prefs") action ShowMenu('preferences')
 
 
@@ -301,7 +317,7 @@ screen navigation():
 
         if main_menu:
 
-            textbutton _("Start") action Start()
+            imagebutton auto "gui/main_menu/start_%s.png" action Start()
 
         else:
 
@@ -309,30 +325,24 @@ screen navigation():
 
             textbutton _("Save") action ShowMenu("save")
 
-        textbutton _("Load") action ShowMenu("load")
+        imagebutton auto "gui/main_menu/load_%s.png" action ShowMenu("load")
 
-        textbutton _("Preferences") action ShowMenu("preferences")
+        imagebutton auto "gui/main_menu/prefs_%s.png" action ShowMenu("preferences")
 
-        if _in_replay:
+        # if _in_replay:
 
-            textbutton _("End Replay") action EndReplay(confirm=True)
+        #     textbutton _("End Replay") action EndReplay(confirm=True)
 
-        elif not main_menu:
+        if not main_menu:
 
             textbutton _("Main Menu") action MainMenu()
 
-        textbutton _("About") action ShowMenu("about")
+        # textbutton _("About") action ShowMenu("about")
 
-        if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
+        # if renpy.variant("pc") or (renpy.variant("web") and not renpy.variant("mobile")):
 
-            ## Help isn't necessary or relevant to mobile devices.
-            textbutton _("Help") action ShowMenu("help")
-
-        if renpy.variant("pc"):
-
-            ## The quit button is banned on iOS and unnecessary on Android and
-            ## Web.
-            textbutton _("Quit") action Quit(confirm=not main_menu)
+        #     ## Help isn't necessary or relevant to mobile devices.
+        #     textbutton _("Help") action ShowMenu("help")
 
 
 style navigation_button is gui_button
@@ -357,11 +367,15 @@ screen main_menu():
     ## This ensures that any other menu screen is replaced.
     tag menu
 
-    add gui.main_menu_background
+    # add gui.main_menu_background
+    add "gui/main_menu/sunburst.png" at sunburst_rotate:
+        xcenter 0.75 ycenter 1.25
 
     ## This empty frame darkens the main menu.
     frame:
         style "main_menu_frame"
+
+    add "gui/logo.png"
 
     ## The use statement includes another screen inside this one. The actual
     ## contents of the main menu are in the navigation screen.
@@ -378,6 +392,22 @@ screen main_menu():
             text "[config.version]":
                 style "main_menu_version"
 
+    if renpy.variant("pc"):
+
+        ## The quit button is banned on iOS and unnecessary on Android and
+        ## Web.
+        imagebutton idle "gui/main_menu/quit.png" action Quit(confirm=not main_menu):
+            xalign 1.0 yalign 0.0
+
+# Defines a transforation that rotates the sunburst image
+transform sunburst_rotate:
+    xanchor 0.5 yanchor 0.5
+    rotate 0
+    linear 12 rotate 90
+    linear 12 rotate 180
+    linear 12 rotate 270
+    linear 12 rotate 360
+    repeat
 
 style main_menu_frame is empty
 style main_menu_vbox is vbox
@@ -389,7 +419,7 @@ style main_menu_frame:
     xsize 420
     yfill True
 
-    background "gui/overlay/main_menu.png"
+    # background "gui/overlay/main_menu.png"
 
 style main_menu_vbox:
     xalign 1.0
@@ -501,7 +531,7 @@ style game_menu_outer_frame:
     bottom_padding 45
     top_padding 180
 
-    background "gui/overlay/game_menu.png"
+    # background "gui/overlay/game_menu.png"
 
 style game_menu_navigation_frame:
     xsize 420

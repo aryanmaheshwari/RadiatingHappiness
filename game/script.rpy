@@ -3,8 +3,10 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define Headmaster = Character("Headmaster")
-define Jellie = Character("Jellie")
+define Headmaster = Character("Headmaster", color="#ffffff")
+define Jellie = Character("Jellie", color="#c1a99c")
+define Jaylin = Character("Jaylin", color="#bfbf90")
+define Ari = Character("Ari", color="#a34635")
 define Main = Character("[main]")
 define MainPro = Character("[mainpro]")
 
@@ -17,39 +19,42 @@ label start:
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.
 
-    scene bg room
+    scene school
 
     # These display lines of dialogue.
 
-    Headmaster "Welcome to Cupid University, a campus of acceptance and excitement.
-I’m honored that you all have chosen our prestigious school as your college of choice. I hope your first year will treat you well and you will enjoy your time with us. Now, off you go!"
+    Headmaster "Welcome to Cupid University, a campus of acceptance and excitement."
+    Headmaster "I’m honored that you all have chosen our prestigious school as your college of choice. "
+    Headmaster "I hope your first year will treat you well and you will enjoy your time with us. Now, off you go!"
 
 
 label initialize_main:
-    scene bg room
+    scene school
     $ main = renpy.input("Enter your name: ", length=32)
     $ main = main.strip()
     if not main:
-         $ main = "You"
+        $ main = "You"
     $ mainpro = renpy.input("Enter your pronouns: ", length=32)
     $ mainpro = mainpro.strip()
     if not main:
-         $ mainpro = main
+        $ mainpro = main
 
     # successful: Headmaster "Your name is [main] and your pronouns are [mainpro]"
 
 
 label week1:
-    scene bg room
-    Headmaster "It’s finally move-in day! Although it’ll be hard living far from home, the exciting experiences at the dorm are waiting for you!"
+    scene room
+    Headmaster "It’s finally move-in day! "
+    Headmaster "Although it’ll be hard living far from home, the exciting experiences at the dorm are waiting for you!"
     Headmaster "Your room number is 1111 - Angel numbers!"
     Headmaster "This year you’ll also be rooming with another freshman, it’s time to meet them :)"
 
 # Episode 1: Jellie
 label jellie_intro_convo:
-    scene bg room # will be dorm room
-    show image "anjnormal.png"
-    Jellie "Hey my name is Anjelly, but you can call me Jellie. I'm your roomate this year, it’s nice to meet you!"
+    scene room # will be dorm room
+    show jellie normal
+    Jellie "Hey my name is Anjelly, but you can call me Jellie. "
+    Jellie "I'm your roomate this year, it’s nice to meet you!"
 
     menu:
         "Hi! My name is [main].":
@@ -60,14 +65,14 @@ label jellie_intro_convo:
 
 
 label fumbled:
-    show image "anjsurprised.png"
+    show jellie surprised
     Jellie "Oh sorry I didn't catch your name."
     Main "Oh my mistake, my name is [main]."
     jump haven_city_convo
 
 
 label haven_city_convo:
-    show image "anjsurprised.png"
+    show jellie surprised
     Jellie "Hm that name sounds familiar, are you from Haven City?"
     menu:
         "Maybe...":
@@ -77,7 +82,7 @@ label haven_city_convo:
             jump past_connection_convo
 
 label past_connection_convo:
-    show image "anjhappy.png"
+    show jellie happy
     Jellie "Don't you remember me, we used to hang out all the time! It's me, Jellybean!"
     menu:
         "Uh yeah I remember now...":
@@ -87,12 +92,13 @@ label past_connection_convo:
             jump jellie_high_connection
 
 label jellie_low_connection:
-    show image "anjsad.png"
-    Headmaster "Feeling slightly rejected, Jellie finishes unpacking and goes to bed. The air feels frigid that night with only hopes of a better morning."
+    show jellie sad
+    Headmaster "Feeling slightly rejected, Jellie finishes unpacking and goes to bed. "
+    Headmaster "The air feels frigid that night with only hopes of a better morning."
     jump end
 
 label jellie_high_connection:
-    show image "anjhappy.png"
+    show jellie happy
     Headmaster "Washed over by a wave of nostalgia, [main] and Jellie talk all night long..."
     jump end
 
