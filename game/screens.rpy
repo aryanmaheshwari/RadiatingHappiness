@@ -101,7 +101,7 @@ screen ctc():
     image "gui/ctc.png" at ctc_appear:
         xpos 1550
         ypos 1000
-        
+
 
 # This defines the CTC's blinking animation
 transform ctc_appear:
@@ -311,7 +311,8 @@ screen navigation():
         style_prefix "navigation"
 
         xpos gui.navigation_xpos
-        yalign 0.5
+        xalign -0.25
+        yalign 0.75
 
         spacing gui.navigation_spacing
 
@@ -375,7 +376,8 @@ screen main_menu():
     frame:
         style "main_menu_frame"
 
-    add "gui/logo.png"
+    add "gui/logo.png":
+        xalign 0.1 yalign 0.1
 
     ## The use statement includes another screen inside this one. The actual
     ## contents of the main menu are in the navigation screen.
