@@ -1,8 +1,8 @@
 label episode2_start:
     scene room
-    Headmaster "The first class you'll be taking this semester will be English 1A."
-    Headmaster "In order to get there you simply have to cross the Japanese Garden and take a right or was it a left?"
-    Headmaster "Oh no... I think we're lost. Maybe we could look around for a map?"
+    Narrator "The first class you'll be taking this semester will be English 1A."
+    Narrator "In order to get there you simply have to cross the Japanese Garden and take a right or was it a left?"
+    Narrator "Oh no... I think we're lost. Maybe we could look around for a map?"
 
 # Episode 2: Jaylin
 label jaylin_intro_convo:
@@ -46,7 +46,7 @@ label jaylin_rejected:
 
 label jaylin_bonding:
     show jaylin normal
-    Headmaster "Jaylin begins leading [main] through campus and the two find out they share some common interests like cooking"
+    Narrator "He begins leading [main] through campus and the two find out they share some common interests like cooking"
     Main "Speaking of cooking, what's up with the frying pan?"
     jump joke
 
@@ -62,10 +62,10 @@ label joke:
             jump common_ending
 
 label common_ending:
-    Headmaster "There may have been some bumps in the road but the day ended without another hitch once [main] found Sweeney Hall. "
-    Headmaster "Some potential friends were made and overall the day ended well. "
-    Headmaster "Hmm now thinking back to it, [main] never got that student's name. "
-    Headmaster "Oh well, it seems the new semester will be a good one after all."
+    Narrator "There may have been some bumps in the road but the day ended without another hitch once [main] found Sweeney Hall. "
+    Narrator "Some potential friends were made and overall the day ended well. "
+    Narrator "Hmm now thinking back to it, [main] never got that student's name. "
+    Narrator "Oh well, it seems the new semester will be a good one after all."
     jump end_episode2
 
 label end_episode2:

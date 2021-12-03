@@ -58,7 +58,7 @@ label week1:
     Narrator "Although it’ll be hard living far from home, the exciting experiences at the dorm are waiting for you!"
     show davie sad
     Narrator "Your room number is 1111 - Angel numbers!"
-    show davie happys
+    show davie happy
     Narrator "This year you’ll also be rooming with another freshman, it’s time to meet them :)"
 
 # Episode 1: Jellie
