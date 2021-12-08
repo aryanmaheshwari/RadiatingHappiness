@@ -4,6 +4,15 @@
 
 init offset = -1
 
+transform zoom_effect(delay = 0):
+    zoom 0.5 alpha 0.0
+    pause delay * 0.03
+    easein_back 0.5 zoom 1.0 alpha 1.0
+
+    on hover, selected_hover:
+        easein_back 0.3 zoom 1.1   
+    on idle, selected_idle:
+        easein_back 0.3 zoom 1.0
 
 ################################################################################
 ## Styles
@@ -227,9 +236,10 @@ screen choice(items):
         yalign 1.0
         yoffset -48
 
-        for i in items:
-            textbutton i.caption action i.action:
+        for i, item in enumerate(items):
+            textbutton item.caption action item.action at zoom_effect(i):
                 ypadding 18
+                xalign 0.5
 
 
 ## When this is true, menu captions will be spoken by the narrator. When false,
@@ -315,16 +325,6 @@ style quick_button_text:
 ## This screen is included in the main and game menus, and provides navigation
 ## to other menus, and to start the game.
 
-transform zoom_on_hover(delay = 0):
-    zoom 0.5
-    pause delay
-    easein_back 0.5 zoom 1.0
-
-    on hover, selected_hover:
-        easein_back 0.3 zoom 1.1   
-    on idle, selected_idle:
-        easein_back 0.3 zoom 1.0
-
 screen navigation():
 
     if main_menu:
@@ -347,17 +347,17 @@ screen navigation():
 
         # Main menu
         if main_menu:
-            textbutton _("Start") action Start() at zoom_on_hover(0) xalign 0.5
-            textbutton _("Load") action ShowMenu("load") at zoom_on_hover(0.03) xalign 0.5
-            textbutton _("Prefs") action ShowMenu("preferences") at zoom_on_hover(0.06) xalign 0.5
+            textbutton _("Start") action Start() at zoom_effect(0) xalign 0.5
+            textbutton _("Load") action ShowMenu("load") at zoom_effect(1) xalign 0.5
+            textbutton _("Prefs") action ShowMenu("preferences") at zoom_effect(2) xalign 0.5
 
         # Pause menu
         else:
-            textbutton _("History") action ShowMenu("history") at zoom_on_hover(0) xalign 0.5
-            textbutton _("Save") action ShowMenu("save") at zoom_on_hover(0.03) xalign 0.5
-            textbutton _("Load") action ShowMenu("load") at zoom_on_hover(0.06) xalign 0.5
-            textbutton _("Prefs") action ShowMenu("preferences") at zoom_on_hover(0.09) xalign 0.5
-            textbutton _("Main Menu") action MainMenu() at zoom_on_hover(0.12) xalign 0.5
+            textbutton _("History") action ShowMenu("history") at zoom_effect(0) xalign 0.5
+            textbutton _("Save") action ShowMenu("save") at zoom_effect(1) xalign 0.5
+            textbutton _("Load") action ShowMenu("load") at zoom_effect(2) xalign 0.5
+            textbutton _("Prefs") action ShowMenu("preferences") at zoom_effect(3) xalign 0.5
+            textbutton _("Main Menu") action MainMenu() at zoom_effect(4) xalign 0.5
 
         # textbutton _("About") action ShowMenu("about")
 
