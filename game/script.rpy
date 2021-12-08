@@ -116,4 +116,5 @@ label jellie_high_connection:
     jump end
 
 label end:
+    hide jellie happy
     jump episode2_start

@@ -48,7 +48,7 @@ label jaylin_talking:
     $ Jaylin = Character("Jay", color="#a34635")
     Jaylin "My name is Jay, I'm the president of the cooking club :D"
 
-label introduce_aryan:
+label introduce_ari:
     show ari happy:
         xpos 0.5
     Ari "You mean the president of the grandpa club."
@@ -107,5 +107,6 @@ label end_ep3:
     show jellie normal
     Jellie "Well that was quite a ride"
     Main "For real"
+    hide jellie normal
     Narrator "What [main] did not know at this moment however was that upon closer inspection, the time of the competition was the same as that of the market. [main_sub] would soon have some big decisions to make. "
-    return
+    jump start_ep4a

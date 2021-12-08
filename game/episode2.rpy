@@ -13,17 +13,13 @@ label jaylin_intro_convo:
 
     menu:
         "Oh my that's embarassing, but yeah would you know where Sweeney Hall 207 is?":
-            jump give_directions
+            Jaylin "Yeah!! That's actually on the opposite side of campus next to the Willow tree though, you seem to have gotten quite off track."
+            jump ask_to_walk
 
         "Uh......":
-            jump jaylin_rejected
-
-
-label give_directions:
-    show jaylin happy
-    Jaylin "Yeah!! That's actually on the opposite side of campus next to the Willow tree though, you seem to have gotten quite off track."
-    Main "Oh my mistake, my name is [main]."
-    jump ask_to_walk
+            Jaylin "Here, let me see your class schedule"
+            Jaylin "Hmm, Sweeney Hall. That's on the opposite side of campus next to the Willow tree..."
+            jump ask_to_walk
 
 label ask_to_walk:
     show jaylin normal
@@ -37,7 +33,7 @@ label ask_to_walk:
 label jaylin_rejected:
     show jaylin sad
     Jaylin "Of course!"
-    Jaylin "{size=20}I'm so stupid why would she want to walk with a weird stranger{/size}"
+    Jaylin "{size=20}I'm so stupid why would [main_sub] want to walk with a weird stranger{/size}"
     Main "Did you say something?"
     Jaylin "Uh I'm promoting the cooking club right now, I was just gonna say you should come check us out sometime! "
     Jaylin "Good luck finding your class, I'll see you around."
@@ -62,6 +58,7 @@ label joke:
             jump common_ending
 
 label common_ending:
+    hide jaylin happy
     Narrator "There may have been some bumps in the road but the day ended without another hitch once [main] found Sweeney Hall. "
     Narrator "Some potential friends were made and overall the day ended well. "
     Narrator "Hmm now thinking back to it, [main] never got that student's name. "
