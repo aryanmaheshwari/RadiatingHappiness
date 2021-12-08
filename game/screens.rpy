@@ -315,7 +315,11 @@ style quick_button_text:
 ## This screen is included in the main and game menus, and provides navigation
 ## to other menus, and to start the game.
 
-transform zoom_on_hover:
+transform zoom_on_hover(delay = 0):
+    zoom 0.5
+    pause delay
+    easein_back 0.5 zoom 1.0
+
     on hover, selected_hover:
         easein_back 0.3 zoom 1.1   
     on idle, selected_idle:
@@ -341,27 +345,19 @@ screen navigation():
 
         spacing 0
 
+        # Main menu
         if main_menu:
+            textbutton _("Start") action Start() at zoom_on_hover(0) xalign 0.5
+            textbutton _("Load") action ShowMenu("load") at zoom_on_hover(0.03) xalign 0.5
+            textbutton _("Prefs") action ShowMenu("preferences") at zoom_on_hover(0.06) xalign 0.5
 
-            textbutton _("Start") action Start() at zoom_on_hover xalign 0.5
-
+        # Pause menu
         else:
-
-            textbutton _("History") action ShowMenu("history") at zoom_on_hover xalign 0.5
-
-            textbutton _("Save") action ShowMenu("save") at zoom_on_hover xalign 0.5
-
-        textbutton _("Load") action ShowMenu("load") at zoom_on_hover xalign 0.5
-
-        textbutton _("Prefs") action ShowMenu("preferences") at zoom_on_hover xalign 0.5
-
-        # if _in_replay:
-
-        #     textbutton _("End Replay") action EndReplay(confirm=True)
-
-        if not main_menu:
-
-            textbutton _("Main Menu") action MainMenu() at zoom_on_hover xalign 0.5
+            textbutton _("History") action ShowMenu("history") at zoom_on_hover(0) xalign 0.5
+            textbutton _("Save") action ShowMenu("save") at zoom_on_hover(0.03) xalign 0.5
+            textbutton _("Load") action ShowMenu("load") at zoom_on_hover(0.06) xalign 0.5
+            textbutton _("Prefs") action ShowMenu("preferences") at zoom_on_hover(0.09) xalign 0.5
+            textbutton _("Main Menu") action MainMenu() at zoom_on_hover(0.12) xalign 0.5
 
         # textbutton _("About") action ShowMenu("about")
 
@@ -1275,6 +1271,7 @@ style confirm_frame:
 style confirm_prompt_text:
     text_align 0.5
     layout "subtitle"
+    font gui.text_font
 
 style confirm_button:
     properties gui.button_properties("confirm_button")
