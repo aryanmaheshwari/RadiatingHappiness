@@ -224,8 +224,12 @@ screen choice(items):
     style_prefix "choice"
 
     vbox:
+        yalign 1.0
+        yoffset -48
+
         for i in items:
-            textbutton i.caption action i.action
+            textbutton i.caption action i.action:
+                ypadding 18
 
 
 ## When this is true, menu captions will be spoken by the narrator. When false,
@@ -263,13 +267,18 @@ screen quick_menu():
 
     if quick_menu:
 
+        image "gui/quick_menu_background.png":
+            xalign 0.5
+            yalign 1.0
+
         hbox:
             style_prefix "quick"
+            spacing 10
 
             xalign 0.5
             yalign 1.0
 
-            textbutton _("Back") action Rollback()
+            # textbutton _("Back") action Rollback()
             textbutton _("History") action ShowMenu('history')
             textbutton _("Skip") action Skip() alternate Skip(fast=True, confirm=True)
             textbutton _("Auto") action Preference("auto-forward", "toggle")
@@ -277,6 +286,7 @@ screen quick_menu():
             # textbutton _("Q.Save") action QuickSave()
             # textbutton _("Q.Load") action QuickLoad()
             textbutton _("Prefs") action ShowMenu('preferences')
+            textbutton _("Hide") action HideInterface()
 
 
 ## This code ensures that the quick_menu screen is displayed in-game, whenever
@@ -305,30 +315,45 @@ style quick_button_text:
 ## This screen is included in the main and game menus, and provides navigation
 ## to other menus, and to start the game.
 
+transform zoom_on_hover:
+    on hover, selected_hover:
+        easein_back 0.3 zoom 1.1   
+    on idle, selected_idle:
+        easein_back 0.3 zoom 1.0
+
 screen navigation():
+
+    if main_menu:
+        $xc = 0.17
+        $yc = 0.67
+    else:
+        $xc = 0.5
+        $yc = 0.5
 
     vbox:
         style_prefix "navigation"
 
-        xpos gui.navigation_xpos
-        xalign -0.25
-        yalign 0.75
+        xcenter xc
+        ycenter yc
 
-        spacing gui.navigation_spacing
+        xanchor 0.5
+        yanchor 0.5
+
+        spacing 0
 
         if main_menu:
 
-            imagebutton auto "gui/main_menu/start_%s.png" action Start()
+            textbutton _("Start") action Start() at zoom_on_hover xalign 0.5
 
         else:
 
-            textbutton _("History") action ShowMenu("history")
+            textbutton _("History") action ShowMenu("history") at zoom_on_hover xalign 0.5
 
-            textbutton _("Save") action ShowMenu("save")
+            textbutton _("Save") action ShowMenu("save") at zoom_on_hover xalign 0.5
 
-        imagebutton auto "gui/main_menu/load_%s.png" action ShowMenu("load")
+        textbutton _("Load") action ShowMenu("load") at zoom_on_hover xalign 0.5
 
-        imagebutton auto "gui/main_menu/prefs_%s.png" action ShowMenu("preferences")
+        textbutton _("Prefs") action ShowMenu("preferences") at zoom_on_hover xalign 0.5
 
         # if _in_replay:
 
@@ -336,7 +361,7 @@ screen navigation():
 
         if not main_menu:
 
-            textbutton _("Main Menu") action MainMenu()
+            textbutton _("Main Menu") action MainMenu() at zoom_on_hover xalign 0.5
 
         # textbutton _("About") action ShowMenu("about")
 
@@ -352,10 +377,39 @@ style navigation_button_text is gui_button_text
 style navigation_button:
     size_group "navigation"
     properties gui.button_properties("navigation_button")
+    idle_background Frame("gui/button/navigation_button_idle_background.png", 64, 0, None, None, False)
+    hover_background Frame("gui/button/navigation_button_hover_background.png", 64, 0, None, None, False)
+    xpadding 72
+    ypadding 32
+    xminimum 400
 
 style navigation_button_text:
     properties gui.button_text_properties("navigation_button")
+    size 52
+    xalign 0.5
+    color "#fff"
 
+## Pause screen ############################################################
+##
+## Shows the pause menu
+##
+screen pause_menu():
+    
+    style_prefix "game_menu"
+
+    tag menu
+
+    add gui.game_menu_background
+
+    use navigation
+    
+    label "Paused"
+
+    textbutton _("< Return"):
+        style "return_button"
+
+        action Return()
+    
 
 ## Main Menu screen ############################################################
 ##
@@ -454,61 +508,63 @@ screen game_menu(title, scroll=None, yinitial=0.0):
     style_prefix "game_menu"
 
     if main_menu:
-        add gui.main_menu_background
-    else:
-        add gui.game_menu_background
+        add "gui/main_menu/sunburst.png" at sunburst_rotate:
+            xcenter 0.75 ycenter 1.25
+
+    add gui.game_menu_background
 
     frame:
         style "game_menu_outer_frame"
 
-        hbox:
+        xalign 0.5
 
-            ## Reserve space for the navigation section.
-            frame:
-                style "game_menu_navigation_frame"
+        frame:
+            style "game_menu_content_frame"
 
-            frame:
-                style "game_menu_content_frame"
+            if scroll == "viewport":
 
-                if scroll == "viewport":
+                viewport:
+                    yinitial yinitial
+                    scrollbars "vertical"
+                    mousewheel True
+                    draggable True
+                    pagekeys True
 
-                    viewport:
-                        yinitial yinitial
-                        scrollbars "vertical"
-                        mousewheel True
-                        draggable True
-                        pagekeys True
+                    side_yfill True
 
-                        side_yfill True
-
-                        vbox:
-                            transclude
-
-                elif scroll == "vpgrid":
-
-                    vpgrid:
-                        cols 1
-                        yinitial yinitial
-
-                        scrollbars "vertical"
-                        mousewheel True
-                        draggable True
-                        pagekeys True
-
-                        side_yfill True
-
+                    vbox:
                         transclude
 
-                else:
+            elif scroll == "vpgrid":
+
+                vpgrid:
+                    cols 1
+                    yinitial yinitial
+
+                    scrollbars "vertical"
+                    mousewheel True
+                    draggable True
+                    pagekeys True
+
+                    side_yfill True
 
                     transclude
 
-    use navigation
+            else:
 
-    textbutton _("Return"):
-        style "return_button"
+                transclude
 
-        action Return()
+    # use navigation
+
+    if main_menu:
+        textbutton _("< Return"):
+            style "return_button"
+            action Return()
+
+    else:
+        textbutton _("< Return"):
+            style "return_button"
+            action ShowMenu("pause_menu")
 
     label title
 
@@ -526,8 +582,9 @@ style game_menu_scrollbar is gui_vscrollbar
 style game_menu_label is gui_label
 style game_menu_label_text is gui_label_text
 
-style return_button is navigation_button
-style return_button_text is navigation_button_text
+style return_button is gui_button
+style return_button_text is gui_button_text:
+    size 36
 
 style game_menu_outer_frame:
     bottom_padding 45
@@ -541,7 +598,8 @@ style game_menu_navigation_frame:
 
 style game_menu_content_frame:
     left_margin 60
-    right_margin 30
+    # right_margin 30
+    right_margin 60
     top_margin 15
 
 style game_menu_viewport:
@@ -554,7 +612,7 @@ style game_menu_side:
     spacing 15
 
 style game_menu_label:
-    xpos 75
+    xalign 0.5
     ysize 180
 
 style game_menu_label_text:
@@ -563,9 +621,8 @@ style game_menu_label_text:
     yalign 0.5
 
 style return_button:
-    xpos gui.navigation_xpos
-    yalign 1.0
-    yoffset -45
+    xpos 40
+    ypos 60
 
 
 ## About screen ################################################################
@@ -925,6 +982,7 @@ screen history():
         for h in _history_list:
 
             window:
+                ypadding 32
 
                 ## This lays things out properly if history_height is None.
                 has fixed:
@@ -958,9 +1016,8 @@ style history_window is empty
 
 style history_name is gui_label
 style history_name_text is gui_label_text
-style history_text is gui_text
 
-style history_text is gui_text
+style history_text is default_text
 
 style history_label is gui_label
 style history_label_text is gui_label_text

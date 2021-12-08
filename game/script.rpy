@@ -16,14 +16,7 @@ define main_obj = ""
 # The game starts here.
 
 label start:
-
-    # Show a background. This uses a placeholder by default, but you can
-    # add a file (named either "bg room.png" or "bg room.jpg") to the
-    # images directory to show it.
-
-    scene school
-    show davie normal
-    # These display lines of dialogue.
+    scene black with fade
 
     Headmaster "Welcome to Cupid University, a campus of acceptance and excitement."
     Headmaster "I’m honored that you all have chosen our prestigious school as your college of choice. "
@@ -31,8 +24,6 @@ label start:
 
 
 label initialize_main:
-    scene school
-    show davie happy
     $ main = renpy.input("Enter your name: ", length=32)
     $ main = main.strip()
     if not main:
@@ -52,7 +43,7 @@ label initialize_main:
 
 
 label week1:
-    scene room
+    scene room with Fade(1.5, 1.0, 1.0, color="#fff")
     show davie normal
     Narrator "It’s finally move-in day! "
     Narrator "Although it’ll be hard living far from home, the exciting experiences at the dorm are waiting for you!"
