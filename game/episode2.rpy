@@ -1,3 +1,8 @@
+###############################################################################
+# Episode 2: Meeting Jay While Lost
+###############################################################################
+
+# Encounter Jaylin
 label ep2_1:
     scene room with Fade(1.5, 1.0, 1.0, color="#000") # making this fade longer conveys a new day
     Narrator "The first class you'll be taking this semester will be English 1A."
@@ -24,6 +29,7 @@ label ep2_1:
         "Uh......":
             jump ep2_2_2
 
+# Ask where Sweeney Hall 207 is
 label ep2_2_1:
     show jaylin happy
     Jaylin "Yeah!! "
@@ -33,6 +39,7 @@ label ep2_2_1:
 
     jump ep2_3
 
+# Let Jaylin see your class schedule
 label ep2_2_2:
     show jaylin happy
     Jaylin "Here, let me see your class schedule"
@@ -42,6 +49,7 @@ label ep2_2_2:
 
     jump ep2_3
 
+# Jaylin asks to walk you
 label ep2_3:
     show jaylin normal
     Jaylin "If you'd like, I could possibly, maybe, not to force you or anything but I could walk you there?"
@@ -52,6 +60,7 @@ label ep2_3:
         "I think I can figure it out from here but thanks.":
             jump ep2_4_2
 
+# Walk with Jaylin
 label ep2_4_1:
 
     hide jaylin with easeoutleft
@@ -86,6 +95,7 @@ label ep2_4_1:
             hide jaylin with easeoutleft
             jump ep2_5
 
+# Turn down Jaylin's offer to walk you
 label ep2_4_2:
     show jaylin sad
     Jaylin "Of course!"
@@ -105,6 +115,7 @@ label ep2_4_2:
     hide jaylin with easeoutleft
     jump ep2_5
 
+# Reflection of day
 label ep2_5:
     scene black with dissolve
 
@@ -116,4 +127,4 @@ label ep2_5:
     Narrator "Hmm now thinking back to it, [main] never got that student's name. "
     Narrator "Oh well, it seems the new semester will be a good one after all."
 
-    jump ep_3
+    jump ep_3_1

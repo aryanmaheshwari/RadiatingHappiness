@@ -1,4 +1,8 @@
+###############################################################################
+# Episode 1: Meeting Your Roommate Jellie
+###############################################################################
 
+# Meet Jellie
 label ep1_1:
     scene room with Fade(1.5, 1.0, 1.0, color="#fff") # making this fade white gives a cool effect
     show davie normal with easeinleft
@@ -35,6 +39,7 @@ label ep1_2_2:
     Jellie "Oh sorry I didn't catch your name."
     Main "Oh my mistake, my name is [main]."
 
+# Reunite with Jellie
 label ep1_3:
     show jellie surprised
     Jellie "Hm that name sounds familiar, are you from Haven City?"
@@ -54,6 +59,7 @@ label ep1_3:
         "OMG how did I forget!! How have you been?":
             jump ep1_4_2
 
+# Reject Jellie
 label ep1_4_1:
     show davie sad
     show jellie sad
@@ -61,14 +67,12 @@ label ep1_4_1:
 
     scene black with dissolve
     Narrator "The air feels frigid that night with only hopes of a better morning."
-    jump ep1_5
+    jump ep2_1
 
+# Catch up with Jellie
 label ep1_4_2:
 
     show jellie happy
     show davie happy
     Narrator "Washed over by a wave of nostalgia, [main] and Jellie talk all night long..."
-    jump ep1_5
-
-label ep1_5:
     jump ep2_1

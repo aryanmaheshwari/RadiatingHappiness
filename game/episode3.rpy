@@ -1,11 +1,15 @@
-label ep_3:
+################################################################################ 
+# Episode 3: Meeting Ari at Club Rush
+###############################################################################
+
+# Start the day
+label ep_3_1:
     scene room with Fade(1.5, 1.0, 1.0, color="#000") # making this fade longer conveys a new day
     Narrator "It's finally club rush day! "
     Narrator "Time to check out the various different activities the university offers and maybe meet some interesting people."
     Narrator "Jellie and you have somewhat maintained a good relationship since the first time you guys talked so you two decided to check out the clubs together! Enjoy my dear!"
 
-# Episode 3: Ari
-label ari_intro_convo:
+    # Talk with Jellie about where to go
     scene club rush with dissolve
     show jellie normal with easeinright:
         xalign 0.25
@@ -18,15 +22,15 @@ label ari_intro_convo:
         "Maybe the cooking club? for no special reason or anything":
             show jellie happy
             Jellie "alright, sounds good to me"
-            jump narration1
+            pass
 
         "Let's go to the cooking club! I know someone there":
             show jellie happy
             Jellie "alright, sounds good to me"
-            jump narration1
+            pass
 
-
-label narration1:
+# Go to the club rush
+label ep_3_2:
     hide davie with easeoutright
     hide jellie with easeoutright
 
@@ -44,9 +48,9 @@ label narration1:
     Narrator "But it seems he’s glaring daggers at a boy from another booth."
     Narrator "That’s weird…"
     Narrator "Ah there we go, he’s noticed you two."
-    jump interrupt_jaylin
 
-label interrupt_jaylin:
+# Jeylin interrupts
+label ep_3_3:
     show jellie normal:
         xalign 0.1
     show davie normal:
@@ -59,12 +63,11 @@ label interrupt_jaylin:
     menu:
         "Oh, this is my friend, Jellie":
             show jellie happy
-            jump jaylin_talking
+            pass
         "Oh, this is just my roommate, Jellie":
             show jellie normal
-            jump jaylin_talking
+            pass
 
-label jaylin_talking:
     show jaylin happy
     Jaylin "Hi, It's nice to meet you, what was your name?"
 
@@ -78,7 +81,8 @@ label jaylin_talking:
     show jaylin happy
     Jaylin "My name is Jay, I'm the president of the cooking club :D"
 
-label introduce_aryan:
+# Introduce Ari
+label ep_3_4:
     show ari normal:
         xalign 1.0
     show jaylin surprised:
@@ -104,11 +108,10 @@ label introduce_aryan:
 
     menu:
         "Oop that was a little rude":
-            jump fashion_club_transition
+            pass
         "Haha, you're too much":
-            jump fashion_club_transition
+            pass
 
-label fashion_club_transition:
     show ari surprised
     show jaylin happy
     show davie surprised
@@ -132,6 +135,8 @@ label fashion_club_transition:
 
     scene black with dissolve
 
+# Jaylin talks about the cooking club after the "fight"
+label ep3_5:
     Narrator "As they continue fighting/flirting? Jellie and you begin to look around at the other clubs."
     Narrator "By the time you two return, they are still at it with their faces only inches apart."
 
@@ -150,11 +155,10 @@ label fashion_club_transition:
     Jellie "Damn the tension is through the roof, kiss already"
     menu:
         "The flirting is getting out of control":
-            jump fighting
+            pass
         "Is this how college kids flirt?":
-            jump fighting
+            pass
 
-label fighting:
     show jaylin angry
     AriJay "WE ARE NOT FLIRTING" with vpunch
 
@@ -176,12 +180,13 @@ label fighting:
         "I'll definitely attend!":
             show davie happy
             show jaylin happy
-            jump ari_respond
+            pass
         "I'll see if I can go":
             show jaylin normal
-            jump ari_respond
+            pass
 
-label ari_respond:
+# Ari talks about the fashion club
+label ep3_6:
     show jaylin normal
     show ari happy
     Ari "In better and more interesting news, the fashion club will be hosting a thrift-inspired show and market!"
@@ -194,12 +199,13 @@ label ari_respond:
     menu:
         "Ooh I'll make space in my schedule":
             show ari happy
-            jump end_ep3
+            pass
         "Hm I'll try to come":
             show ari normal
-            jump end_ep3
+            pass
 
-label end_ep3:
+# Back at the dorms
+label ep3_7:
     scene room with fade
 
     show jellie normal with easeinright:
@@ -214,4 +220,5 @@ label end_ep3:
 
     Narrator "What [main] did not know at this moment however was that upon closer inspection, the time of the competition was the same as that of the market."
     Narrator "[main_sub] would soon have some big decisions to make."
-    return
+    
+    jump ep4a_1
