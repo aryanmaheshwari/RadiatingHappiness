@@ -42,7 +42,7 @@ label ep2_2_1:
 # Let Jaylin see your class schedule
 label ep2_2_2:
     show jaylin happy
-    Jaylin "Here, let me see your class schedule"
+    Jaylin "Here, let me see your class schedule!"
 
     show jaylin sad
     Jaylin "Hmm, Sweeney Hall. That's on the opposite side of campus next to the Willow tree..."
@@ -55,7 +55,7 @@ label ep2_3:
     Jaylin "If you'd like, I could possibly, maybe, not to force you or anything but I could walk you there?"
     
     menu:
-        "I would appreciate that, please":
+        "I would appreciate that, please.":
             jump ep2_4_1
         "I think I can figure it out from here, but thanks.":
             jump ep2_4_2
@@ -86,12 +86,12 @@ label ep2_4_1:
     Jaylin "Just kidding! I'm promoting the cooking club right now, you should come check us out sometime!"
 
     menu:
-        "Haha okay":
+        "Haha okay!":
             Main "Thank you for walking me, bye!"
             show davie normal
             hide jaylin with easeoutleft
             jump ep2_5
-        "That's kind of an insensitive joke":
+        "That's kind of an insensitive joke...":
             Main "Thank you for walking me, bye..."
             show davie angry
             hide jaylin with easeoutleft
@@ -102,7 +102,7 @@ label ep2_4_2:
     show jaylin sad
     Jaylin "Of course!"
     
-    Jaylin "{size=20}I'm so stupid why would she want to walk with a weird stranger{/size}{nw}"
+    Jaylin "{size=20}I'm so stupid why would she want to walk with a weird stranger--{/size}{nw}"
 
     show davie sad
     Main "Did you say something?"

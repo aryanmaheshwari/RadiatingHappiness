@@ -19,14 +19,14 @@ label ep_3_1:
     Jellie "What kind of clubs did you want to check out first?"
 
     menu:
-        "Maybe the cooking club? For no special reason or anything":
+        "Maybe the cooking club? For no special reason or anything.":
             show jellie happy
-            Jellie "alright, sounds good to me"
+            Jellie "Alright, sounds good to me."
             pass
 
-        "Let's go to the cooking club! I know someone there":
+        "Let's go to the cooking club! I know someone there.":
             show jellie happy
-            Jellie "alright, sounds good to me"
+            Jellie "Alright, sounds good to me."
             pass
 
 # Go to the club rush
@@ -46,7 +46,7 @@ label ep_3_2:
 
     Narrator "And surprise surprise, there’s the mysterious pan boy too!"
     Narrator "But it seems he’s glaring daggers at a boy from another booth."
-    Narrator "That’s weird…"
+    Narrator "That’s weird..."
     Narrator "Ah there we go, he’s noticed you two."
 
 # Jeylin interrupts
@@ -63,10 +63,10 @@ label ep_3_3:
     Main "Oh..."
 
     menu:
-        "This is my friend, Jellie":
+        "This is my friend, Jellie.":
             show jellie happy
             pass
-        "This is just my roommate, Jellie":
+        "This is just my roommate, Jellie.":
             show jellie normal
             pass
 
@@ -81,7 +81,7 @@ label ep_3_3:
     $ Jaylin = Character("Jay", color="#bfbf90")
     
     show jaylin happy
-    Jaylin "My name is Jay, I'm the president of the cooking club :D"
+    Jaylin "My name is Jay, I'm the president of the cooking club! :D"
 
 # Introduce Ari
 label ep_3_4:
@@ -109,9 +109,9 @@ label ep_3_4:
     Ari "Don’t waste your time with those snickerdoodles."
 
     menu:
-        "Oop that was a little rude":
+        "Oop that was a little rude.":
             pass
-        "Haha, you're too much":
+        "Haha, you're too much.":
             pass
 
     show ari surprised
@@ -119,11 +119,11 @@ label ep_3_4:
     show davie surprised
     show jellie surprised
 
-    Jaylin "Yeah right fashion club-- it's more like a blood donation club"
+    Jaylin "Yeah right fashion club-- it's more like a blood donation club."
 
     show jaylin surprised
     show ari happy
-    Ari "HEY just because you don’t have girls literally having nose bleeds over how hot you are doesn’t mean our club isn’t legit."
+    Ari "HEY! Just because you don’t have girls literally having nose bleeds over how hot you are doesn’t mean our club isn’t legit." with vpunch
 
     show ari surprised
     show jaylin happy
@@ -133,13 +133,14 @@ label ep_3_4:
     show davie happy
     show jellie happy
     show ari angry
-    Ari "NO I DIDN'T"
+    Ari "NO I DIDN'T!" with vpunch
 
     scene black with dissolve
 
 # Jaylin talks about the cooking club after the "fight"
 label ep3_5:
-    Narrator "As they continue fighting/flirting? Jellie and you begin to look around at the other clubs."
+    Narrator "As they continue fighting... flirting?..."
+    Narrator "...you and Jellie begin to look around at the other clubs."
     Narrator "By the time you two return, they are still at it with their faces only inches apart."
 
     scene bg club rush
@@ -154,18 +155,18 @@ label ep3_5:
     show jellie normal with easeinleft:
         xalign 0.0
 
-    Jellie "Damn the tension is through the roof, kiss already"
+    Jellie "Damn, the tension is through the roof. Kiss already!"
     menu:
-        "The flirting is getting out of control":
+        "The flirting is getting out of control.":
             pass
         "Is this how college kids flirt?":
             pass
 
     show jaylin angry
-    AriJay "WE ARE NOT FLIRTING" with vpunch
+    AriJay "WE ARE NOT FLIRTING!" with vpunch
 
     show jaylin sad
-    Jaylin "*clears throat*"
+    Jaylin "*clears throat*{nw}"
 
     show jaylin normal
     show ari surprised
@@ -176,14 +177,14 @@ label ep3_5:
     Jaylin "The cooking club will be having a tournament amongst our senior and junior members next week, you two should swing by!"
 
     show jaylin normal
-    Jaylin "Yours truly will be one of the competitors ;) Here’s a flyer"
+    Jaylin "Yours truly will be one of the competitors! ;) Here’s a flyer."
 
     menu:
         "I'll definitely attend!":
             show davie happy
             show jaylin happy
             pass
-        "I'll see if I can go":
+        "I'll see if I can go.":
             show jaylin normal
             pass
 
@@ -199,10 +200,10 @@ label ep3_6:
     Ari "Here’s our Insta with all the info!"
 
     menu:
-        "Ooh I'll make space in my schedule":
+        "Ooh I'll make space in my schedule.":
             show ari happy
             pass
-        "Hm I'll try to come":
+        "Hm I'll try to come.":
             show ari normal
             pass
 
@@ -215,8 +216,8 @@ label ep3_7:
     show davie normal with easeinright:
         xalign 0.75
 
-    Jellie "Well that was quite a ride"
-    Main "For real"
+    Jellie "Well, that was quite a ride."
+    Main "For real."
 
     scene black with dissolve
 

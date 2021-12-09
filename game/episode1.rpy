@@ -11,7 +11,7 @@ label ep1_1:
     Narrator "Although it’ll be hard living far from home, the exciting experiences at the dorm are waiting for you!"
     show davie happy
     Narrator "Your room number is 1111 - Angel numbers!"
-    Narrator "This year you’ll also be rooming with another freshman, it’s time to meet them! :)"
+    Narrator "This year you’ll also be rooming with another freshman. It’s time to meet them! :)"
     hide davie with easeoutright
 
     # Episode 1: Jellie
@@ -47,16 +47,16 @@ label ep1_3:
         "Maybe...":
             pass
 
-        "yeah, how'd you know":
+        "Yeah, how'd you know?":
             pass
 
     show jellie happy
     Jellie "Don't you remember me, we used to hang out all the time! It's me, Jellybean!"
     menu:
-        "Uh yeah I remember now...":
+        "Uh yeah, I remember now...":
             jump ep1_4_1
 
-        "OMG how did I forget!! How have you been?":
+        "OMG, how did I forget?! How have you been?":
             jump ep1_4_2
 
 # Reject Jellie

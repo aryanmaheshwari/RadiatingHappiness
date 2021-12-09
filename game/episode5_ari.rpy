@@ -10,9 +10,10 @@ label ep5_ari_1:
     
     show jellie normal
     Main "Hey Jellie, can I ask you a question?"
-    Jellie "Yeah go ahead, whats up"
+    Jellie "Yeah go ahead, what's up?"
     Main "Do you think going on a date with Ari will be weird?"
-    Jellie "Hmm, depends. Do you think you could see him in a romantic way? Because if not maybe its better to just decline the date and keep your friendship."
+    Jellie "Hmm, depends. Do you think you could see him in a romantic way? "
+    Jellie "Because if not maybe its better to just decline the date and keep your friendship."
     Jellie "But really, its all about what you are most comfortable with."
     
     Main "Yeah.. thank you Jellie, that cleared up a lot. "
@@ -33,7 +34,8 @@ label ep5_ari_2_1:
     Narrator "Perhaps your gloominess was too obvious because soon after Jellie pulled you into a bear hug."
     
     show jellie normal
-    Jellie "Rejecting someone is hard, I'm proud of you for not chickening out. I'm heading home for the break, do you think you'll be okay alone?"
+    Jellie "Rejecting someone is hard, I'm proud of you for not chickening out. "
+    Jellie "I'm heading home for the break, do you think you'll be okay alone?"
     Jellie "Or actually- do you want to come over?"
 
     menu:
@@ -41,7 +43,7 @@ label ep5_ari_2_1:
             Jellie "Yay! Alright lets start packing then!"
 
         "Oh no, I couldn't intrude.":
-            Jellie "Nonsense! You're coming with! Now start packing :)"
+            Jellie "Nonsense! You're coming with! Now start packing! :)"
 
     Narrator "And with that your winter break began in the comfort of Jellie's family home."
     Narrator "You guys drank hot cocoa, watched stupid romcoms, and cuddled by the fireplace."
@@ -54,7 +56,8 @@ label ep5_ari_2_1:
     scene cg davie x jellie with Fade(1.0, 1.0, 3.0, color="#fff") # Slow transition for dramatic effect
 
     Narrator "Worried that you were overstepping boundaries you cracked your eyes open only to see Jellie also leaning in too."
-    Narrator "With a smile you closed your eyes and the rest was history. Maybe college wasn't too bad after all."
+    Narrator "With a smile you closed your eyes and the rest was history. "
+    Narrator "Maybe college wasn't too bad after all."
 
     scene black with Dissolve(3.0) # Slow transition for dramatic effect
 
@@ -64,34 +67,37 @@ label ep5_ari_2_1:
 label ep5_ari_2_2:
     Narrator "You decide to reply to Ari through a text with an equally excited response..."
     Narrator "...which soon becomes hearted by the blushing boy."
-    Narrator "It's now the day of the fated date! You've completed all the chores on your list in preparation for this. You can only hope it goes as well as you want it to. Maybe this winter you won't be as alone as before."
+    Narrator "It's now the day of the fated date! "
+    Narrator "You've completed all the chores on your list in preparation for this. You can only hope it goes as well as you want it to. "
+    Narrator "Maybe this winter you won't be as alone as before."
     Main "Ari told me to meet him by the blue tree so... Ah there he is!"
 
     show ari normal
     Ari "Hey cutie! You wanna walk around and check out the lights for a bit?"
-    Main "Yep, that sounds good to me"
+    Main "Yep, that sounds good to me."
 
     jump ep5_ari_3
 
 # At date location
 label ep5_ari_3:
     Narrator "You two took in the lights around you and began to make conversation starting from small talk to the deeper talks about things you hold dear to your heart."
-    Narrator "At some point, you tripped and Ari grabbed your hand to steady you. He didn’t let go after you were alright, however, and you might have been just fine with that. "
+    Narrator "At some point, you tripped and Ari grabbed your hand to steady you. "
+    Narrator "He didn’t let go after you were alright, however, and you might have been just fine with that. "
     Ari "Alright, Alright, this isn’t all I have planned for our date. I was going to ask… are you ready for some ice skating!"
-    Main "OMG I love ice skating! "
+    Main "OMG, I love ice skating! "
 
     menu:
-        "I’ll have you know I’m a pro":
+        "I’ll have you know I’m a pro!":
             jump ep5_ari_4_1
 
-        "I’m not that good at it though":
+        "I’m not that good at it though...":
             jump ep5_ari_4_2
 
 # End of date - Ari falling for DaVie
 label ep5_ari_4_1:
     show ari happy
-    Ari "Ohoho, I'll have to have you help me not fall then "
-    Main "Sounds like a plan haha!"
+    Ari "Ohoho, I'll have to have you help me not fall then. "
+    Main "Sounds like a plan!"
     Narrator "True to his word, Ari was complete chaos on the ice. "
     Narrator "The amount of time he fell on his butt was hilarious. "
     Ari "You're having too much fun with this, do you enjoy having me fall for you that much?"
@@ -116,7 +122,7 @@ label ep5_ari_4_1:
 label ep5_ari_4_2:
     show ari happy
     Ari "That's alright, I'll be there to prevent you from falling ;)"
-    Main "okayyy I'll believe you..."
+    Main "Okayyy I'll believe you..."
     Narrator "True to your word, you were complete chaos on the ice. "
     Narrator "The amount of times you almost fell was hilarious."
     Ari "I'm sorry for laughing, I just can't believe you were actually this bad."
