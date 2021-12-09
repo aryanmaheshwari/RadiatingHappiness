@@ -4,7 +4,7 @@
 
 # Encounter Jaylin
 label ep2_1:
-    scene bg room with Fade(1.5, 1.0, 1.0, color="#000") # making this fade longer conveys a new day
+    scene black with Fade(1.5, 1.0, 1.0, color="#000") # making this fade longer conveys a new day
     Narrator "The first class you'll be taking this semester will be English 1A."
 
     scene bg japanese garden with dissolve
