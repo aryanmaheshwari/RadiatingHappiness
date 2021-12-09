@@ -7,3 +7,4 @@ log*.txt
 traceback.txt
 /psd/debug.log
 .DS_Store
+.vscode
