@@ -33,6 +33,7 @@ label start_ep4b_ari_nj:
                             Narrator "Back at the dorms after washing up, you finally get a chance to catch your breath."
                             Narrator "One hectic week finished up with an equally hectic day."
                             Narrator "Who knows, maybe the twinkling christmas decorations will shine a light on any possible feelings you have for Ari."
+                            jump start_ari_date
                 "This is like Devil wears Prada but not!":
                     Ari "You know it! While on the subject of um whatever we are on, what are you up to next week?"
                     menu:
@@ -49,6 +50,7 @@ label start_ep4b_ari_nj:
                                     Narrator "Back at the dorms after washing up, you finally get a chance to catch your breath."
                                     Narrator "One hectic week finished up with an equally hectic day."
                                     Narrator "Who knows, maybe the twinkling christmas decorations will shine a light on any possible feelings you have for Ari."
+                                    jump start_ari_date
                                     hide ari happy
         "Hm well, then I won't hold you up. Thank you for coming! Enjoy the cook-off.":
             hide ari happy
@@ -83,14 +85,11 @@ label cont_ari_end:
             Narrator "Back at the dorms after washing up, you finally get a chance to catch your breath."
             Narrator "One hectic week finished up with an equally hectic day."
             Narrator "Who knows, maybe the twinkling christmas decorations will shine a light on the feelings you hold for Jay."
-            jump ari_combo_end
+            jump start_jay_date
         "Oh, yeah I think I'd really like that :)":
             Jaylin "Alright! It's a date ♡"
             hide jaylin happy
             Narrator "Back at the dorms after washing up, you finally get a chance to catch your breath."
             Narrator "One hectic week finished up with an equally hectic day."
             Narrator "Who knows, maybe the twinkling christmas decorations will shine a light on the feelings you hold for Jay."
-            jump ari_combo_end
-
-label ari_combo_end:
-    return
+            jump start_jay_date

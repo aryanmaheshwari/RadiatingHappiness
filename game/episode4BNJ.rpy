@@ -44,4 +44,4 @@ label ep4bnj_end:
     Main "a date?"
     hide da vie happy
     Narrator "With that, one hectic week finished up with an equally hectic day. Who knows, maybe the twinkling christmas decorations will shine a light on the feelings you hold for Jay."
-    return
+    jump start_jay_date

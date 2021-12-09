@@ -44,7 +44,7 @@ label initialize_main:
             $ main_sub = "they"
             $ main_obj = "them"
 
-<<<<<<< HEAD
+#<<<<<<< HEAD
 
 label week1:
     scene room
@@ -112,7 +112,7 @@ label jellie_high_connection:
 
 label end:
     hide jellie happy
-    jump episode2_start
-=======
-    jump ep1_1
->>>>>>> 82de09c74c78dc01ff20fd1ff386056fff0457c2
+    jump ep2_1
+#=======
+    #jump ep1_1
+#>>>>>>> 82de09c74c78dc01ff20fd1ff386056fff0457c2

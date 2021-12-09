@@ -51,10 +51,12 @@ label cont_jellie_convo_ari:
                             Ari "Perfect! I'll see you next week then, text me when you get home  ♡"
                             hide ari happy
                             Narrator "Back at the dorms after washing up, you finally get a chance to catch your breath.  One hectic week finished up with an equally hectic day. Who knows, maybe the twinkling christmas decorations will shine a light on any possible feelings you have for Ari."
+                            jump start_ari_date
                         "Oh, yeah I think I'd really like that :)":
                             Ari "Perfect! I'll see you next week then, text me when you get home  ♡"
                             hide ari happy
                             Narrator "Back at the dorms after washing up, you finally get a chance to catch your breath.  One hectic week finished up with an equally hectic day. Who knows, maybe the twinkling christmas decorations will shine a light on any possible feelings you have for Ari."
+                            jump start_ari_date
                 "This is like Devil wears Prada but not!":
                     Ari "You know it! While on the subject of um whatever we are on, what are you up to next week?"
                     Main "I'm pretty free, what's up?"
@@ -64,7 +66,9 @@ label cont_jellie_convo_ari:
                             Ari "Perfect! I'll see you next week then, text me when you get home  ♡"
                             hide ari happy
                             Narrator "Back at the dorms after washing up, you finally get a chance to catch your breath.  One hectic week finished up with an equally hectic day. Who knows, maybe the twinkling christmas decorations will shine a light on any possible feelings you have for Ari."
+                            jump start_ari_date
                         "Oh, yeah I think I'd really like that :)":
                             Ari "Perfect! I'll see you next week then, text me when you get home  ♡"
                             hide ari happy
                             Narrator "Back at the dorms after washing up, you finally get a chance to catch your breath.  One hectic week finished up with an equally hectic day. Who knows, maybe the twinkling christmas decorations will shine a light on any possible feelings you have for Ari."
+                            jump start_ari_date

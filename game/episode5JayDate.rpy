@@ -75,6 +75,3 @@ label common_end_Jay_date:
     Narrator "You'd have to kiss him more often to see those eyes again. Not that you mind"
     Narrator "After all, winter is not such a cold season."
     jump fin
-
-label fin:
-    return

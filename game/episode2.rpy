@@ -19,19 +19,18 @@ label ep2_1:
 
     menu:
         "Oh my that's embarassing, but yeah would you know where Sweeney Hall 207 is?":
-<<<<<<< HEAD
             Jaylin "Yeah!! That's actually on the opposite side of campus next to the Willow tree though, you seem to have gotten quite off track."
-            jump ask_to_walk
+            #jump ask_to_walk
+            jump ep2_2_1
 
         "Uh......":
             Jaylin "Here, let me see your class schedule"
             Jaylin "Hmm, Sweeney Hall. That's on the opposite side of campus next to the Willow tree..."
-            jump ask_to_walk
-=======
-            jump ep2_2_1
-
-        "Uh......":
+            # jump ask_to_walk
             jump ep2_2_2
+
+        # "Uh......":
+        #    jump ep2_2_2
 
 label ep2_2_1:
     show jaylin happy
@@ -48,21 +47,21 @@ label ep2_2_2:
 
     show jaylin sad
     Jaylin "Hmm, Sweeney Hall. That's on the opposite side of campus next to the Willow tree..."
->>>>>>> 82de09c74c78dc01ff20fd1ff386056fff0457c2
+#>>>>>>> 82de09c74c78dc01ff20fd1ff386056fff0457c2
 
     jump ep2_3
 
 label ep2_3:
     show jaylin normal
     Jaylin "If you'd like, I could possibly, maybe, not to force you or anything but I could walk you there?"
-    
+
     menu:
         "I would appreciate that, please":
             jump ep2_4_1
         "I think I can figure it out from here but thanks.":
             jump ep2_4_2
 
-<<<<<<< HEAD
+# <<<<<<< HEAD
 label jaylin_rejected:
     show jaylin sad
     Jaylin "Of course!"
@@ -72,18 +71,18 @@ label jaylin_rejected:
     Jaylin "Good luck finding your class, I'll see you around."
     Main "Okay, bye!"
     jump common_ending
-=======
+#=======
 label ep2_4_1:
 
     hide jaylin with easeoutleft
     hide davie with easeoutleft
     scene black with dissolve
->>>>>>> 82de09c74c78dc01ff20fd1ff386056fff0457c2
+#>>>>>>> 82de09c74c78dc01ff20fd1ff386056fff0457c2
 
     Narrator "He begins leading [main] through campus and the two find out they share some common interests like cooking"
-    
+
     scene school with dissolve
-    
+
     show jaylin normal with easeinright:
         xalign 0.25
     show davie normal with easeinright:
@@ -111,7 +110,7 @@ label ep2_4_1:
 label ep2_4_2:
     show jaylin sad
     Jaylin "Of course!"
-    
+
     Jaylin "{size=20}I'm so stupid why would she want to walk with a weird stranger{/size}{nw}"
 
     show davie sad
@@ -130,11 +129,11 @@ label ep2_4_2:
 label ep2_5:
     scene black with dissolve
 
-<<<<<<< HEAD
+#<<<<<<< HEAD
 label common_ending:
     hide jaylin happy
-=======
->>>>>>> 82de09c74c78dc01ff20fd1ff386056fff0457c2
+#=======
+#>>>>>>> 82de09c74c78dc01ff20fd1ff386056fff0457c2
     Narrator "There may have been some bumps in the road but the day ended without another hitch once [main] found Sweeney Hall. "
     Narrator "Some potential friends were made and overall the day ended well. "
 

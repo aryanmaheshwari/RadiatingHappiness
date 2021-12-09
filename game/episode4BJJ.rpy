@@ -82,4 +82,4 @@ label other_plan:
     jump combined_ending4b
 
 label end_ep4BJJ:
-    return
+    jump start_jay_date

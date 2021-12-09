@@ -11,7 +11,7 @@ label ari_intro_convo:
         xalign 0.25
     show davie normal with easeinright:
         xalign 0.75
-    
+
     Jellie "What kind of clubs did you want to check out first?"
 
     menu:
@@ -33,10 +33,10 @@ label narration1:
     scene black with dissolve
     Narrator "The two of you walk towards the center of the campus where the more well-known clubs are gathering."
     Narrator "Looking around, you finally locate their booth."
-    
+
     scene club rush with dissolve
     show davie normal with easeinleft:
-        xalign 0.75 
+        xalign 0.75
     show jellie normal with easeinleft:
         xalign 0.25
 
@@ -74,15 +74,15 @@ label jaylin_talking:
     show jaylin normal
     Jaylin "Well, no better time than the present."
     $ Jaylin = Character("Jay", color="#bfbf90")
-    
+
     show jaylin happy
     Jaylin "My name is Jay, I'm the president of the cooking club :D"
 
-<<<<<<< HEAD
+# <<<<<<< HEAD
 label introduce_ari:
     show ari happy:
         xpos 0.5
-=======
+#=======
 label introduce_aryan:
     show ari normal:
         xalign 1.0
@@ -94,7 +94,7 @@ label introduce_aryan:
         xalign 0
     with easeinright
 
->>>>>>> 82de09c74c78dc01ff20fd1ff386056fff0457c2
+#>>>>>>> 82de09c74c78dc01ff20fd1ff386056fff0457c2
     Ari "You mean the president of the grandpa club."
 
     show ari happy
@@ -215,15 +215,15 @@ label end_ep3:
 
     Jellie "Well that was quite a ride"
     Main "For real"
-<<<<<<< HEAD
+#<<<<<<< HEAD
     hide jellie normal
     Narrator "What [main] did not know at this moment however was that upon closer inspection, the time of the competition was the same as that of the market. [main_sub] would soon have some big decisions to make. "
     jump start_ep4a
-=======
+#=======
 
     scene black with dissolve
 
     Narrator "What [main] did not know at this moment however was that upon closer inspection, the time of the competition was the same as that of the market."
     Narrator "[main_sub] would soon have some big decisions to make."
     return
->>>>>>> 82de09c74c78dc01ff20fd1ff386056fff0457c2
+#>>>>>>> 82de09c74c78dc01ff20fd1ff386056fff0457c2
