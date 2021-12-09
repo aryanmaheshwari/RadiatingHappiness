@@ -4,10 +4,13 @@
 
 # Convo with Jellie
 label ep5_jay_1:
-    scene bg room
+    scene black with Fade(1.5, 1.0, 1.0, color="#000") # making this fade longer conveys a new day
+    
     Narrator "*over voicemail*"
     Jaylin "Hey [main], just calling to remind you of our date tomorrow. I can't wait, I'll see you then!"
     
+    scene bg room with Fade(1.5, 1.0, 1.0, color="#000") # making this fade longer conveys a new day
+
     show jellie normal
     Main "Hey Jellie, can I ask you a question?"
     Jellie "Yeah go ahead, what's up?"

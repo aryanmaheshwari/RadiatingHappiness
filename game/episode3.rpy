@@ -51,13 +51,14 @@ label ep_3_2:
 
 # Jeylin interrupts
 label ep_3_3:
+    show jaylin happy with easeinright:
+        xalign 0.9
+
     show jellie normal:
         xalign 0.1
     show davie normal:
         xalign 0.5
-    show jaylin happy:
-        xalign 0.9
-    with easeinright
+    with ease
 
     Jaylin "Hey, I'm so glad you actually came! Who's this?"
     Main "Oh..."
@@ -85,15 +86,16 @@ label ep_3_3:
 
 # Introduce Ari
 label ep_3_4:
-    show ari normal:
+    show ari normal with easeinright:
         xalign 1.0
+
     show jaylin surprised:
         xalign 0.67
     show davie surprised:
         xalign 0.33
     show jellie surprised:
         xalign 0
-    with easeinright
+    with ease
 
     Ari "You mean the president of the grandpa club."
 
