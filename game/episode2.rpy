@@ -4,10 +4,10 @@
 
 # Encounter Jaylin
 label ep2_1:
-    scene room with Fade(1.5, 1.0, 1.0, color="#000") # making this fade longer conveys a new day
+    scene bg room with Fade(1.5, 1.0, 1.0, color="#000") # making this fade longer conveys a new day
     Narrator "The first class you'll be taking this semester will be English 1A."
 
-    scene japanese garden with dissolve
+    scene bg japanese garden with dissolve
     Narrator "In order to get there you simply have to cross the Japanese Garden and take a right or was it a left?"
 
     show davie sad with easeinright:
@@ -57,7 +57,7 @@ label ep2_3:
     menu:
         "I would appreciate that, please":
             jump ep2_4_1
-        "I think I can figure it out from here but thanks.":
+        "I think I can figure it out from here, but thanks.":
             jump ep2_4_2
 
 # Walk with Jaylin
@@ -67,9 +67,9 @@ label ep2_4_1:
     hide davie with easeoutleft
     scene black with dissolve
 
-    Narrator "He begins leading [main] through campus and the two find out they share some common interests like cooking"
+    Narrator "He begins leading [main] through campus and the two find out they share some common interests like cooking."
     
-    scene school with dissolve
+    scene bg school with dissolve
     
     show jaylin normal with easeinright:
         xalign 0.25
@@ -86,11 +86,13 @@ label ep2_4_1:
     Jaylin "Just kidding! I'm promoting the cooking club right now, you should come check us out sometime!"
 
     menu:
-        "haha okay thank you for walking me, bye!":
+        "Haha okay":
+            Main "Thank you for walking me, bye!"
             show davie normal
             hide jaylin with easeoutleft
             jump ep2_5
-        "that's kind of an insensitive joke, thank you for walking me, bye":
+        "That's kind of an insensitive joke":
+            Main "Thank you for walking me, bye..."
             show davie angry
             hide jaylin with easeoutleft
             jump ep2_5

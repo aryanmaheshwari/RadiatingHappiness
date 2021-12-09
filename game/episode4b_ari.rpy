@@ -6,7 +6,7 @@
 # With Jellie
 ###############################################################################
 label ep4b_ari_1_1:
-    scene room
+    scene bg room
     Narrator "Once you and Jellie got ready, you two walked towards the school's Japanese Garden where the event was taking place."
     Narrator "But while walking, it seems Jellie wants to ask you something."
 
@@ -18,7 +18,7 @@ label ep4b_ari_1_1:
     menu:
         "Haha no, not at all":
             pass
-        "Um, maybe? I guess I'm still figuring it out":
+        "Um, maybe? I guess I'm still figuring it out...":
             pass
 
     Jellie "Oh okay, my bad I was just wondering since you guys have been talking so much lately"
@@ -45,14 +45,15 @@ label ep4b_ari_1_1:
     Ari "Actually, I was wondering if you, oh beautiful soul, could accompany me to check out the thrift booths?"
 
     menu:
-        "Haha, I would absolutely love to! I'll just text Jellie where we'll be":
+        "Haha, I would absolutely love to!":
             jump ep4b_ari_2_1
 
-        "Aw I'm sorry, I'd love to but I'm going to try to see Jay's cooking competition too so I should leave soon":
+        "Aw I'm sorry, I'd love to but I'm going to try to see Jay's cooking competition too.":
             jump ep4b_ari_2_2
 
 # Leads to Ari's date
 label ep4b_ari_2_1:
+    Main "I'll just text Jellie where we'll be."
     Ari "It's not too far, just to the right of the show. Here we are at my booth :)"
 
     menu:
@@ -67,7 +68,7 @@ label ep4b_ari_2_1:
     Ari "You know Christmas in the Park? Would you like to go there with me next week, as a date?"
 
     menu:
-        "OH, um sure?":
+        "Oh, um sure?":
             pass
             
         "Oh, yeah I think I'd really like that :)":
@@ -82,6 +83,7 @@ label ep4b_ari_2_1:
 
 # Leads to Jay's event
 label ep4b_ari_2_2:
+    Main "I should leave soon..."
     Ari " Hm well, then I won't hold you up. Thank you for coming! Enjoy the cook-off."
     Ari "Jellie decided to stick around the thrift booths to check out the other designers so you decidecd to just go ahead to Jay's event. Hopefully you won't be too late"
 
@@ -91,14 +93,14 @@ label ep4b_ari_2_2:
 # Without Jellie
 ###############################################################################
 label ep4b_ari_1_2:
-    scene room
+    scene bg room
     Narrator "Once you finished getting ready, you began your walk towards the school's Japanese Garden where the event was taking place."
     Narrator "It was a short walk but it gave you time to create expectations for the event."
     Narrator "After reaching the garden, you paid for your ticket and found a seat that had a good view of the stage setup."
     Narrator "There's Ari to the right of the stage. It seems he's altering some of the clothes a model is wearing."
     Narrator "Oop he spotted you and is waving now! It's almost as if just seeing us made his aura brighten."
     Narrator "Watching Ari direct the models to the stage and fix all of the minor mishaps put into perspective another version of him that you had rarely seen."
-    Narrator "Wow he's really cool when he's designing"
+    Narrator "Wow he's really cool when he's designing."
     Narrator "You could only watch in awe as you became entranced with his professional air."
     Narrator "Soon enough the show ended and the announcer began to call out the various designers featured."
     Narrator "When Ari came out, the smile he held showed off a softer side of his that put his usual smirk to shame."
@@ -111,14 +113,15 @@ label ep4b_ari_1_2:
     Ari "Haha actually, I was wondering if you, oh beautiful soul, could accompany me to check out the thrift booths?"
     
     menu:
-        "Haha, I would absolutely love to! I'll just text Jellie where we'll be":
+        "Haha, I would absolutely love to!":
             jump ep4b_ari_2_3
 
-        "Aw I'm sorry, I'd love to but I'm going to try to see Jay's cooking competition too so I should leave soon":
+        "Aw I'm sorry, I'd love to but I'm going to try to see Jay's cooking competition too.":
             jump ep4b_ari_2_4
 
 # Leads to Ari's date
 label ep4b_ari_2_3:
+    Main "I'll just text Jellie where we'll be."
     Ari "It's not too far, just to the right of the show. Here we are at my booth :)"
     menu:
         "Wow and this is all recycled material? You've gotta be a genius!":
@@ -132,7 +135,7 @@ label ep4b_ari_2_3:
     Ari "You know Christmas in the Park? Would you like to go there with me next week, as a date?"
     
     menu:
-        "OH, um sure?":
+        "Oh, um sure?":
             pass
         "Oh, yeah I think I'd really like that :)":
             pass
@@ -147,6 +150,7 @@ label ep4b_ari_2_3:
 
 # Leads to Jay's event
 label ep4b_ari_2_4:
+    Main "I should leave soon..."
     Ari "Hm well, then I won't hold you up. Thank you for coming! Enjoy the cook-off."
 
     hide ari happy

@@ -4,13 +4,13 @@
 
 # Start the day
 label ep_3_1:
-    scene room with Fade(1.5, 1.0, 1.0, color="#000") # making this fade longer conveys a new day
+    scene bg room with Fade(1.5, 1.0, 1.0, color="#000") # making this fade longer conveys a new day
     Narrator "It's finally club rush day! "
     Narrator "Time to check out the various different activities the university offers and maybe meet some interesting people."
-    Narrator "Jellie and you have somewhat maintained a good relationship since the first time you guys talked so you two decided to check out the clubs together! Enjoy my dear!"
+    Narrator "Jellie and you have somewhat maintained a good relationship since the first time you guys talked so you two decided to check out the clubs together!"
 
     # Talk with Jellie about where to go
-    scene club rush with dissolve
+    scene bg club rush with dissolve
     show jellie normal with easeinright:
         xalign 0.25
     show davie normal with easeinright:
@@ -19,7 +19,7 @@ label ep_3_1:
     Jellie "What kind of clubs did you want to check out first?"
 
     menu:
-        "Maybe the cooking club? for no special reason or anything":
+        "Maybe the cooking club? For no special reason or anything":
             show jellie happy
             Jellie "alright, sounds good to me"
             pass
@@ -38,7 +38,7 @@ label ep_3_2:
     Narrator "The two of you walk towards the center of the campus where the more well-known clubs are gathering."
     Narrator "Looking around, you finally locate their booth."
     
-    scene club rush with dissolve
+    scene bg club rush with dissolve
     show davie normal with easeinleft:
         xalign 0.75 
     show jellie normal with easeinleft:
@@ -60,11 +60,13 @@ label ep_3_3:
     with easeinright
 
     Jaylin "Hey, I'm so glad you actually came! Who's this?"
+    Main "Oh..."
+
     menu:
-        "Oh, this is my friend, Jellie":
+        "This is my friend, Jellie":
             show jellie happy
             pass
-        "Oh, this is just my roommate, Jellie":
+        "This is just my roommate, Jellie":
             show jellie normal
             pass
 
@@ -140,7 +142,7 @@ label ep3_5:
     Narrator "As they continue fighting/flirting? Jellie and you begin to look around at the other clubs."
     Narrator "By the time you two return, they are still at it with their faces only inches apart."
 
-    scene club rush
+    scene bg club rush
     show jaylin angry:
         xalign 0.67
     show ari angry:
@@ -206,7 +208,7 @@ label ep3_6:
 
 # Back at the dorms
 label ep3_7:
-    scene room with fade
+    scene bg room with fade
 
     show jellie normal with easeinright:
         xalign 0.25

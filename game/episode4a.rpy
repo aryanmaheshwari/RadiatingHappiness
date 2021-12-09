@@ -4,7 +4,7 @@
 
 # Wake up
 label ep4a_1:
-    scene room
+    scene bg room
     Narrator "The week has flown by with assignments and presentations piled up on your plate. Somehow, without even realizing it, it’s now the day of the fashion show and the cooking competition."
     Narrator "After the invitations at the club rush, you had ended up seeing Jay and Ari again."
     Narrator "Surprisingly enough, for two apparent rivals, they were always together whenever you bumped into each other."
@@ -33,11 +33,11 @@ label ep4a_2_1:
     Main "Yeah maybe, I'll try to work something out. Thanks for the advice"
     Jellie "For sure, so which do you think you'll go to?"
     menu:
-        "I'll go to Jay's cooking competition, wanna come with and drool over the food with me?":
+        "Jay's cooking competition, wanna come with and drool over the food with me?":
             Jellie "Yep! I'll come :)"
             hide jellie normal
             jump ep4b_jay_1_1
-        "I think Ari's fashion show, wanna come with and check out the thrift shop too?":
+        "Ari's fashion show, wanna come with and check out the thrift shop too?":
             Jellie "Yep! I'll come :)"
             hide jellie normal
             jump ep4b_ari_1_1

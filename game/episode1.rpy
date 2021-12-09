@@ -4,18 +4,18 @@
 
 # Meet Jellie
 label ep1_1:
-    scene room with Fade(1.5, 1.0, 1.0, color="#fff") # making this fade white gives a cool effect
+    scene bg room with Fade(1.5, 1.0, 1.0, color="#fff") # making this fade white gives a cool effect
     show davie normal with easeinleft
-    Narrator "It’s finally move-in day "
+    Narrator "It’s finally move-in day!"
     show davie sad
     Narrator "Although it’ll be hard living far from home, the exciting experiences at the dorm are waiting for you!"
     show davie happy
     Narrator "Your room number is 1111 - Angel numbers!"
-    Narrator "This year you’ll also be rooming with another freshman, it’s time to meet them :)"
+    Narrator "This year you’ll also be rooming with another freshman, it’s time to meet them! :)"
     hide davie with easeoutright
 
     # Episode 1: Jellie
-    scene room with fade # will be dorm room
+    scene bg room with fade # will be dorm room
     show davie normal with easeinleft:
         xalign 0.75
     show jellie normal with easeinleft:

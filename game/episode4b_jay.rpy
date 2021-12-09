@@ -6,7 +6,7 @@
 # With Jellie
 ###############################################################################
 label ep4b_jay_1_1:
-    scene room
+    scene bg room
     Narrator "Once you and Jellie got ready, you two boarded the bus that would take you two to the culinary institute's auditorium. But while on the bus, it seems Jellie wants to ask you something."
     
     show jellie normal
@@ -18,7 +18,7 @@ label ep4b_jay_1_1:
         "Haha no, not at all":
             pass
 
-        "Um, maybe? I guess I'm still figuring it out":
+        "Um, maybe? I guess I'm still figuring it out...":
             pass
 
     show jellie normal:
@@ -52,13 +52,14 @@ label ep4b_jay_1_1:
     Jaylin "That's only if you're comfortable with it of course. Ya know what I shouldn't have asked, you've probably already eaten-"
     
     menu:
-        "No! I would love to try what you made! It looked absolutely delicious":
+        "No! I would love to try what you made!":
             jump ep4b_jay_2_1
-        "V - Aw I'm sorry, I'd love to but I'm going to try to see Ari's fashion show too so I should leave soon":
+        "Aw I'm sorry, I'd love to but I'm going to try to see Ari's fashion show too.":
             jump ep4b_jay_2_2
 
 # Leads to Jay's date
 label ep4b_jay_2_1:
+    Main "It looked absolutely delicious!"
     Jaylin "Really? Then come on over let me plate it for you!!"
 
     menu:
@@ -90,36 +91,41 @@ label ep4b_jay_2_1:
 
 # Leads to Ari's event
 label ep4b_jay_2_2:
+    Main "I should leave soon..."
+
     show jaylin sad
     Jellie "Oh... well, thank you for coming anyway! Enjoy the fashion show "
+
     hide jaylin sad
     Narrator "Jellie decided to stick around the cooking competition to check out the other entries so you decided to just go ahead to Ari's event. Hopefully you won't be too late"
+
     jump ep4b_jay_3
 
 ###############################################################################
 # Without Jellie
 ###############################################################################
 label ep4b_jay_1_2:
-    scene room
+    scene bg room
     Narrator "Once you finished getting ready, you boarded the bus that would take you to the culinary institute's auditorium."
     Narrator "It was a short ride but it gave you time to create expectations for the event."
     Narrator "After reaching the auditorium, you paid for your ticket and found a seat that had a good view of the station Jay was assigned to and Oh!"
     Narrator "He spotted you and waved. It was a good thing we came so we could see that bright smile."
     Narrator "Watching Jay masterfully chop the ingredients up and work precisely to cook them the right amount stirred something awake in you that you were not yet aware of."
-    Narrator "Wow he's really cool when he becomes serious"
+    Narrator "Wow he's really cool when he becomes serious!"
     Narrator "You could only wear a smile as you became entranced with his professional air."
     Narrator "Soon enough the results of the competition came out with Jay being only in second place."
     Narrator "A shame but still pretty high for a junior. He would definitely have a bright future ahead of him, maybe you could be a part of it."
+
     show jaylin happy
-    Jaylin "hey [main]! I'm so happy you made it, you being there really made me feel like I could win :)"
+    Jaylin "Hey [main]! I'm so happy you made it, you being there really made me feel like I could win :)"
     Main "You were amazing! Even without our support you would do wonderfully, do you have any plans to celebrate after this?"
     Jaylin "Oh yeah, about that, I was wondering if you  would like to try the meal I cooked? That's only if you're comfortable with it of course. Ya know what I shouldn't have asked, you've probably already eaten-"
 
     menu:
-        "No! I would love to try what you made! It looked absolutely delicious":
+        "No! I would love to try what you made! It looked absolutely delicious.":
             jump ep4b_jay_2_3
 
-        "Aw I'm sorry, I'd love to but I'm going to try to see Ari's fashion show too so I should leave soon":
+        "Aw I'm sorry, I'd love to but I'm going to try to see Ari's fashion show too.":
             jump ep4b_jay_2_4
 
 # Leads to Jay's date
@@ -138,14 +144,18 @@ label ep4b_jay_2_3:
     Main "Yeah! Jellie was actually talking about it, we were planning on going!"
     Jaylin "Oh I actually meant just us?"
     Main "Just us? um sure!"
+
     show jaylin happy
     Jaylin "Alright! It's a date ♡"
+
     hide jaylin happy
     show jellie normal:
         xpos 0.5
     Jellie "Hey, what's up, what'd I miss?"
+
     show jellie surprised
     Main "Um, I think... Jay and I are going on a date"
+
     hide jellie surprised
     Narrator "Back at the dorms after washing up, you finally get a chance to catch your breath."
     Narrator "One hectic week finished up with an equally hectic day."
@@ -155,9 +165,10 @@ label ep4b_jay_2_3:
 
 # Leads to Ari's event
 label ep4b_jay_2_4:
+    Main "I should leave soon..."
     Jaylin "Oh... well, thank you for coming anyway! Enjoy the fashion show"
     Narrator "After a short bus ride and walk you were able to make it to Ari's event."
-    Narrator "Hopefully you aren't too late"
+    Narrator "Hopefully you aren't too late."
 
     jump ep4b_jay_3
 
@@ -168,11 +179,12 @@ label ep4b_jay_2_4:
 label ep4b_jay_3:
     show ari sad
     Ari "[main]! Over here! You just missed it, we're starting to close up now :("
+    Main "Aw I'm so sorry..."
 
     menu:
-        "Aw I'm so sorry, I was busy with some other stuff so time flew by too fast":
+        "I was busy with some other stuff so time flew by too fast":
             pass
-        "Aw I'm so sorry, I went to Jay's cooking competition too so it slowed me down a bit":
+        "I went to Jay's cooking competition too so it slowed me down a bit":
             pass
 
     show ari sad
@@ -189,7 +201,7 @@ label ep4b_jay_3:
     Ari "Would you like to go there with me next week, as a date?"
 
     menu:
-        "OH, um sure?":
+        "Oh, um sure?":
             pass
         "Oh, yeah I think I'd really like that :)":
             pass

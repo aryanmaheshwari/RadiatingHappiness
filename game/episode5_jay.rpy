@@ -4,7 +4,7 @@
 
 # Convo with Jellie
 label ep5_jay_1:
-    scene room
+    scene bg room
     Narrator "*over voicemail*"
     Jaylin "Hey [main], just calling to remind you of our date tomorrow. I can't wait, I'll see you then!"
     
@@ -14,11 +14,12 @@ label ep5_jay_1:
     Main "Do you think going on a date with Jay will be weird?"
     Jellie "Hmm, depends. Do you think you could see him in a romantic way? Because if not maybe its better to just decline the date and keep your friendship."
     Jellie "But really, its all about what you are most comfortable with."
-    
+    Main "Yeah.. thank you Jellie, that cleared up a lot. "
+
     menu:
-        "Yeah.. thank you Jellie, that cleared up a lot. I think I'm going to decline the date.":
+        "I think I'm going to decline the date.":
             jump ep5_jay_2_1
-        "Yeah.. thank you Jellie, that cleared up a lot. I think I'm going to try going to the date.":
+        "I think I'm going to try going to the date.":
             hide jellie normal
             jump ep5_jay_2_2
 
@@ -42,10 +43,18 @@ label ep5_jay_2_1:
     Narrator "And with that your winter break began in the comfort of Jellie's family home."
     Narrator "You guys drank hot cocoa, watched stupid romcoms, and cuddled by the fireplace."
     Narrator "The comfort you felt in her arms was everything you'd ever wanted."
+    
+    scene black with dissolve
+
     Narrator "Finally, one thing led to another and you found yourself leaning in for a kiss."
+
+    scene cg davie x jellie with Fade(1.0, 1.0, 3.0, color="#fff")  # Slow transition for dramatic effect
+
     Narrator "Worried that you were overstepping boundaries, you cracked your eyes open only to see Jellie also leaning in too."
     Narrator "With a smile you closed your eyes and the rest was history. Maybe college wasn't too bad after all."
         
+    scene black with Dissolve(3.0) # Slow transition for dramatic effect
+
     jump fin
 
 # Accepting Jay's date
@@ -67,7 +76,7 @@ label ep5_jay_3:
         "Sounds good, my treat!":
             jump ep5_jay_4_1
             
-        "Great idea! I could use some warmth":
+        "Great idea! I could use some warmth.":
             jump ep5_jay_4_2
 
 label ep5_jay_4_1:
@@ -93,9 +102,17 @@ label ep5_jay_5:
     Narrator "Amused by his refusal to let you buy him anything you spend the next minutes trying to figure out what he would want as a present."
     Narrator "With you spitting out random guesses that get worse every time and him denying every single one, you two fall into laughter."
     Narrator "After the 10 millionth guess and 10 millionth denial, his pout seems just too cute for you too handle."
+
+    scene black with dissolve
+
     Narrator "Before you know it you find yourself leaning in and meeting his lips with yours."
+
+    scene cg davie x jaylin with Fade(1.0, 1.0, 3.0, color="#fff")  # Slow transition for dramatic effect
+
     Narrator "Let it be known that the shock of his crush kissing him jolted him so bad that Jay opened his eyes for the first time and boy were they beautiful."
     Narrator "You'd have to kiss him more often to see those eyes again. Not that you mind"
     Narrator "After all, winter is not such a cold season."
+
+    scene black with Dissolve(3.0) # Slow transition for dramatic effect
 
     jump fin
