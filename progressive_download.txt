@@ -4,6 +4,12 @@
 #
 # +/- type path
 - image game/gui/**
+<<<<<<< HEAD
 + image game/**
 + music game/audio/**
+=======
+- image game/images**
++ image game/**
++ music game/music/**
+>>>>>>> 82de09c74c78dc01ff20fd1ff386056fff0457c2
 + voice game/voice/**

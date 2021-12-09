@@ -5,10 +5,14 @@
 
 define Headmaster = Character("Headmaster", color="#ffffff")
 define Narrator = Character("Narrator", color="#ffffff")
+
 define Jellie = Character("???", color="#c1a99c")
 define Jaylin = Character("???", color="#bfbf90")
 define Ari = Character("???", color="#a34635")
 define Main = Character("[main]")
+
+define AriJay = Character("Jay and Ari", color="#ffffff")
+
 define main_sub = ""
 define main_obj = ""
 
@@ -16,23 +20,13 @@ define main_obj = ""
 # The game starts here.
 
 label start:
-
-    # Show a background. This uses a placeholder by default, but you can
-    # add a file (named either "bg room.png" or "bg room.jpg") to the
-    # images directory to show it.
-
-    scene school
-    show davie normal
-    # These display lines of dialogue.
+    scene black with fade
 
     Headmaster "Welcome to Cupid University, a campus of acceptance and excitement."
     Headmaster "I’m honored that you all have chosen our prestigious school as your college of choice. "
     Headmaster "I hope your first year will treat you well and you will enjoy your time with us. Now, off you go!"
 
-
 label initialize_main:
-    scene school
-    show davie happy
     $ main = renpy.input("Enter your name: ", length=32)
     $ main = main.strip()
     if not main:
@@ -50,6 +44,7 @@ label initialize_main:
             $ main_sub = "they"
             $ main_obj = "them"
 
+<<<<<<< HEAD
 
 label week1:
     scene room
@@ -118,3 +113,6 @@ label jellie_high_connection:
 label end:
     hide jellie happy
     jump episode2_start
+=======
+    jump ep1_1
+>>>>>>> 82de09c74c78dc01ff20fd1ff386056fff0457c2
