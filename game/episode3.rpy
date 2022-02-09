@@ -12,7 +12,7 @@ label ep_3_1:
     # Talk with Jellie about where to go
     scene bg club rush with dissolve
     
-    play music "music/Montauk Point.mp3"
+    play music "music/Montauk Point.ogg"
 
     show jellie normal with easeinright:
         xalign 0.25

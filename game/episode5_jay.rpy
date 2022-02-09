@@ -50,7 +50,7 @@ label ep5_jay_2_1:
     Narrator "Although the call goes well, there is still a taste of sadness in the air for disappointing a friend and possibly straining your relationship with them."
     Narrator "Perhaps your gloominess was too obvious because soon after Jellie pulled you into a bear hug."
     
-    play music "music/Angel Share.mp3"
+    play music "music/Angel Share.ogg"
 
     scene bg room
     show jellie normal:
@@ -99,7 +99,7 @@ label ep5_jay_2_1:
 
     Narrator "Finally, one thing led to another and you found yourself leaning in for a kiss."
 
-    play music "music/Heartwarming.mp3" fadein 1.0
+    play music "music/Heartwarming.ogg" fadein 1.0
     
     scene cg davie x jellie with Fade(1.0, 1.0, 3.0, color="#fff")  # Slow transition for dramatic effect
 
@@ -122,7 +122,7 @@ label ep5_jay_2_2:
     Narrator "You've completed all the chores on your list in preparation for this. You can only hope it goes as well as you want it to. "
     Narrator "Maybe this winter you won't be as alone as before."
     
-    play music "music/Winter Chimes.mp3"
+    play music "music/Winter Chimes.ogg"
     scene bg xmas 
     show davie normal:
         xalign 0.75
@@ -194,7 +194,7 @@ label ep5_jay_5:
 
     Narrator "Before you know it, you find yourself leaning in and meeting his lips with yours."
 
-    play music "music/Heartwarming.mp3" fadein 1.0
+    play music "music/Heartwarming.ogg" fadein 1.0
     scene cg davie x jaylin with Fade(1.0, 1.0, 3.0, color="#fff")  # Slow transition for dramatic effect
 
     Narrator "Let it be known that the shock of his crush kissing him jolted him so bad that Jay opened his eyes for the first time, and boy were they beautiful."

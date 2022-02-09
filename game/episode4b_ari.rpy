@@ -11,7 +11,7 @@ label ep4b_ari_1_1:
     Narrator "Once you and Jellie got ready, you two walked towards the school's Japanese Garden where the event was taking place."
     Narrator "But while walking, it seems Jellie wants to ask you something."
 
-    play music "music/Carpe Diem.mp3"
+    play music "music/Carpe Diem.ogg"
 
     scene bg school with dissolve
     show davie normal with easeinleft:

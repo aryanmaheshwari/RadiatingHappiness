@@ -4,7 +4,7 @@
 
 # Meet Jellie
 label ep1_1:
-    play music "music/Montauk Point.mp3"
+    play music "music/Montauk Point.ogg"
 
     scene bg room with Fade(1.5, 1.0, 1.0, color="#fff") # making this fade white gives a cool effect
     

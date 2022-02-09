@@ -8,7 +8,7 @@ label ep2_1:
     
     Narrator "The first class you'll be taking this semester will be English 1A."
     
-    play music "music/Carpe Diem.mp3"
+    play music "music/Carpe Diem.ogg"
 
     scene bg japanese garden with dissolve
     Narrator "In order to get there you simply have to cross the Japanese Garden and take a right or was it a left?"

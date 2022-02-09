@@ -14,7 +14,7 @@ label ep4a_1:
     Narrator "But the day to decide which event to go to has finally come. "
     Narrator "It’s up to you to choose where to go-- will you pick the right one?"
     
-    play music "music/Angel Share.mp3"
+    play music "music/Angel Share.ogg"
     scene bg room 
     show jellie happy
     with Fade(1.5, 1.0, 1.0, color="#000") # making this fade longer conveys a new day
