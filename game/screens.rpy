@@ -138,8 +138,8 @@ screen say(who, what):
 
     ## If there's a side image, display it above the text. Do not display on the
     ## phone variant - there's no room.
-    if not renpy.variant("small"):
-        add SideImage() xalign 0.0 yalign 1.0
+    # if not renpy.variant("small"):
+    #     add SideImage() xalign 0.0 yalign 1.0
 
 
 ## Make the namebox available for styling through the Character object.
@@ -1498,9 +1498,16 @@ style nvl_button_text:
 ## Mobile Variants
 ################################################################################
 
-style pref_vbox:
-    variant "medium"
-    xsize 675
+# style pref_vbox:
+#     variant "medium"
+#     xsize 675
+
+screen ctc():
+    variant "touch"
+    
+    image "gui/ctc.png" at ctc_appear:
+        xpos 1800
+        ypos 1000
 
 ## Since a mouse may not be present, we replace the quick menu with a version
 ## that uses fewer and bigger buttons that are easier to touch.
@@ -1517,14 +1524,15 @@ screen quick_menu():
             xalign 0.5
             yalign 1.0
 
-            textbutton _("Back") action Rollback()
             textbutton _("Skip") action Skip() alternate Skip(fast=True, confirm=True)
             textbutton _("Auto") action Preference("auto-forward", "toggle")
             textbutton _("Menu") action ShowMenu()
+            textbutton _("Hide") action HideInterface()
 
 
 style window:
     variant "small"
+    ypadding 30
     background "gui/phone/textbox.png"
 
 style radio_button:
@@ -1535,25 +1543,25 @@ style check_button:
     variant "small"
     foreground "gui/phone/button/check_[prefix_]foreground.png"
 
-style nvl_window:
-    variant "small"
-    background "gui/phone/nvl.png"
+# style nvl_window:
+#     variant "small"
+#     background "gui/phone/nvl.png"
 
-style main_menu_frame:
-    variant "small"
-    background "gui/phone/overlay/main_menu.png"
+# style main_menu_frame:
+#     variant "small"
+#     background "gui/phone/overlay/main_menu.png"
 
-style game_menu_outer_frame:
-    variant "small"
-    background "gui/phone/overlay/game_menu.png"
+# style game_menu_outer_frame:
+#     variant "small"
+#     background "gui/phone/overlay/game_menu.png"
 
-style game_menu_navigation_frame:
-    variant "small"
-    xsize 510
+# style game_menu_navigation_frame:
+#     variant "small"
+#     xsize 510
 
-style game_menu_content_frame:
-    variant "small"
-    top_margin 0
+# style game_menu_content_frame:
+#     variant "small"
+#     top_margin 0
 
 style pref_vbox:
     variant "small"

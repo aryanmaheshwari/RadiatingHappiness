@@ -11,6 +11,8 @@ label ep4b_ari_1_1:
     Narrator "Once you and Jellie got ready, you two walked towards the school's Japanese Garden where the event was taking place."
     Narrator "But while walking, it seems Jellie wants to ask you something."
 
+    play music "music/Carpe Diem.mp3"
+
     scene bg school with dissolve
     show davie normal with easeinleft:
         xalign 0.75
@@ -336,6 +338,8 @@ label ep4b_ari_2_3:
     Narrator "One hectic week finished up with an equally hectic day."
     Narrator "Who knows, maybe the twinkling christmas decorations will shine a light on any possible feelings you have for Ari."
 
+    stop music fadeout 1.0
+
     jump ep5_ari_1
 
 # Leads to Jay's event
@@ -355,6 +359,8 @@ label ep4b_ari_2_4:
     Narrator "After a short bus ride you were able to make it to Jay's event. "
     Narrator "Hopefully you aren't too late..."
     
+    stop music fadeout 1.0
+
     jump ep4b_ari_3
 
 ###############################################################################

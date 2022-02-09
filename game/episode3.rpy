@@ -4,13 +4,16 @@
 
 # Start the day
 label ep_3_1:
-    scene bg room with Fade(1.5, 1.0, 1.0, color="#000") # making this fade longer conveys a new day
+    scene black with Fade(1.5, 1.0, 1.0, color="#000") # making this fade longer conveys a new day
     Narrator "It's finally club rush day! "
     Narrator "Time to check out the various different activities the university offers and maybe meet some interesting people."
     Narrator "Jellie and you have somewhat maintained a good relationship since the first time you guys talked so you two decided to check out the clubs together!"
 
     # Talk with Jellie about where to go
     scene bg club rush with dissolve
+    
+    play music "music/Montauk Point.mp3"
+
     show jellie normal with easeinright:
         xalign 0.25
     show davie normal with easeinright:
@@ -226,4 +229,6 @@ label ep3_7:
     Narrator "What [main] did not know at this moment however was that upon closer inspection, the time of the competition was the same as that of the market."
     Narrator "[main_sub] would soon have some big decisions to make."
     
+    stop music fadeout 1.0
+
     jump ep4a_1

@@ -20,7 +20,10 @@ define main_obj = ""
 # The game starts here.
 
 label start:
+
     scene black with fade
+
+    stop music fadeout 1.0
 
     Headmaster "Welcome to Cupid University, a campus of acceptance and excitement."
     Headmaster "I’m honored that you all have chosen our prestigious school as your college of choice. "

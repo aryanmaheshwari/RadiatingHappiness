@@ -14,6 +14,7 @@ label ep4a_1:
     Narrator "But the day to decide which event to go to has finally come. "
     Narrator "It’s up to you to choose where to go-- will you pick the right one?"
     
+    play music "music/Angel Share.mp3"
     scene bg room 
     show jellie happy
     with Fade(1.5, 1.0, 1.0, color="#000") # making this fade longer conveys a new day
@@ -62,10 +63,12 @@ label ep4a_2_1:
         "Jay's cooking competition.\n Wanna come with and drool over the food with me?":
             show jellie happy
             Jellie "Yep! I'll come! :)"
+            stop music fadeout 1.0
             jump ep4b_jay_1_1
         "Ari's fashion show.\n Wanna come with and check out the thrift shop too?":
             show jellie happy
             Jellie "Yep! I'll come! :)"
+            stop music fadeout 1.0
             jump ep4b_ari_1_1
 
 # Brush off the dilemma and go to the event(s) alone
@@ -86,7 +89,9 @@ label ep4a_2_2:
 
     menu:
         "Go to Jay's cooking competition":
+            stop music fadeout 1.0
             jump ep4b_jay_1_2
 
         "Go to Ari's fashion show":
+            stop music fadeout 1.0
             jump ep4b_ari_1_2

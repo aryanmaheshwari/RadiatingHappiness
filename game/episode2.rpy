@@ -5,7 +5,10 @@
 # Encounter Jaylin
 label ep2_1:
     scene black with Fade(1.5, 1.0, 1.0, color="#000") # making this fade longer conveys a new day
+    
     Narrator "The first class you'll be taking this semester will be English 1A."
+    
+    play music "music/Carpe Diem.mp3"
 
     scene bg japanese garden with dissolve
     Narrator "In order to get there you simply have to cross the Japanese Garden and take a right or was it a left?"
@@ -128,5 +131,7 @@ label ep2_5:
 
     Narrator "Hmm now thinking back to it, [main] never got that student's name. "
     Narrator "Oh well, it seems the new semester will be a good one after all."
+    
+    stop music fadeout 1.0
 
     jump ep_3_1

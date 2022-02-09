@@ -4,8 +4,12 @@
 
 # Meet Jellie
 label ep1_1:
+    play music "music/Montauk Point.mp3"
+
     scene bg room with Fade(1.5, 1.0, 1.0, color="#fff") # making this fade white gives a cool effect
+    
     show davie normal with easeinleft
+
     Narrator "It’s finally move-in day!"
     show davie sad
     Narrator "Although it’ll be hard living far from home, the exciting experiences at the dorm are waiting for you!"
@@ -75,4 +79,7 @@ label ep1_4_2:
     show jellie happy
     show davie happy
     Narrator "Washed over by a wave of nostalgia, [main] and Jellie talk all night long..."
+
+    stop music fadeout 1.0
+
     jump ep2_1
