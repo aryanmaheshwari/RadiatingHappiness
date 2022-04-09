@@ -14,6 +14,28 @@ transform zoom_effect(delay = 0):
     on idle, selected_idle:
         easein_back 0.3 zoom 1.0
 
+init python:
+    all_gallery_images = {
+        "ari_kiss": (
+            "gui/main_menu/gallery/ari_kiss_locked.png",
+            "gui/main_menu/gallery/ari_kiss_unlocked.png",
+            "images/cg/cg davie x ari.png",
+            1400, 220
+        ),
+        "jaylin_kiss": (
+            "gui/main_menu/gallery/jaylin_kiss_locked.png",
+            "gui/main_menu/gallery/jaylin_kiss_unlocked.png",
+            "images/cg/cg davie x jaylin.png",
+            1640, 605
+        ),
+        "jellie_kiss": (
+            "gui/main_menu/gallery/jellie_kiss_locked.png",
+            "gui/main_menu/gallery/jellie_kiss_unlocked.png",
+            "images/cg/cg davie x jellie.png",
+            1210, 800
+        )
+    }
+
 ################################################################################
 ## Styles
 ################################################################################
@@ -427,22 +449,35 @@ screen main_menu():
         style "main_menu_frame"
 
     add "gui/logo.png":
-        xalign 0.1 yalign 0.1
+        xalign 0.1 yalign 0.2
 
     ## The use statement includes another screen inside this one. The actual
     ## contents of the main menu are in the navigation screen.
     use navigation
 
-    if gui.show_name:
+    ## Show the gallery buttons
+    for i, img in enumerate(all_gallery_images.items()):
+        $ (name, attr) = img
+        $ (locked_btn_path, unlocked_btn_path, full_img_path, x, y) = attr
 
-        vbox:
-            style "main_menu_vbox"
+        if name in persistent.unlocked_gallery_images:
+            imagebutton idle unlocked_btn_path:
+                xpos x ypos y
+                xanchor 0.5 yanchor 0.5
+                action ShowMenu("gallery_image", full_img_path)
+                at zoom_effect(i + 3)
+        else:
+            imagebutton idle locked_btn_path:
+                xpos x ypos y
+                xanchor 0.5 yanchor 0.5
+                at zoom_effect(i + 3)
+            pass
 
-            text "[config.name!t]":
-                style "main_menu_title"
-
-            text "[config.version]":
-                style "main_menu_version"
+    text "[config.version]":
+        xalign 1.0 yalign 1.0
+        xoffset -10 yoffset -10
+        size 32
+        color "#000"
 
     if renpy.variant("pc"):
 
@@ -489,6 +524,17 @@ style main_menu_title:
 style main_menu_version:
     properties gui.text_properties("version")
 
+## Gallery Image screen ############################################################
+##
+## This lays out the basic common structure of a gallery image screen.
+
+screen gallery_image(path):
+        
+    modal True
+
+    imagebutton idle path:
+        xalign 0.5 yalign 0.5
+        action Hide("gallery_image", transition=dissolve)
 
 ## Game Menu screen ############################################################
 ##
@@ -1503,7 +1549,7 @@ style nvl_button_text:
 #     xsize 675
 
 screen ctc():
-    variant "touch"
+    variant "small"
     
     image "gui/ctc.png" at ctc_appear:
         xpos 1800

@@ -1,5 +1,10 @@
 # The script of the game goes in this file.
 
+init python:
+    persistent = persistent    
+    if persistent.unlocked_gallery_images == None:
+        persistent.unlocked_gallery_images = []
+
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
@@ -16,7 +21,6 @@ define AriJay = Character("Jay and Ari", color="#ffffff")
 define main_sub = ""
 define main_obj = ""
 
-
 # The game starts here.
 
 label start:
@@ -30,10 +34,10 @@ label start:
     Headmaster "I hope your first year will treat you well and you will enjoy your time with us. Now, off you go!"
 
 label initialize_main:
-    $ main = renpy.input("Enter your name: ", length=32)
+    $ main = renpy.input("Enter your name: ", length=32, default="DaVie")
     $ main = main.strip()
     if not main:
-        $ main = "Da Vie"
+        $ main = "DaVie"
     if not main:
         $ mainpro = main
     menu:
